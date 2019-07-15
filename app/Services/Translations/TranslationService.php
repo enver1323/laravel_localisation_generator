@@ -60,6 +60,8 @@ class TranslationService extends CustomService
             $query = $this->model;
             $this->fireStatusMessage(StatusMessage::TYPES['warning'], 'Nothing was found according to your query');
         }
+
+        return [$query, $object];
     }
 
     public function create(TranslationStoreRequest $request): void

@@ -2,60 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fefa86fb-a92e-41fc-9100-761d2f89f14d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Entities/StatusMessage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Entities/Users/UserRM.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/languages/languageCreate.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/languages/languageEdit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/languages/languageIndex.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/languages/languageShow.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/translations/translationCreate.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/translations/translationEdit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5937306e-711d-4cdd-8ba7-2d34bc7591ec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5937306e-711d-4cdd-8ba7-2d34bc7591ec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entites/CustomModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entites/CustomReadModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entites/Groups/Group.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entites/Languages/Language.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entites/Languages/LanguageRM.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entites/Projects/Project.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entites/Projects/ProjectRM.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entites/Translations/Entries/TranslationEntry.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entites/Translations/Translation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entites/Translations/TranslationRM.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entites/Users/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TranslationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TranslationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationStoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/CustomService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/CustomService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Translations/LanguageService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Languages/LanguageService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/Translations/TranslationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Translations/TranslationService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_06_18_104002_create_translations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_06_18_104002_create_translations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/errors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/status.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/translations/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/translations/translationIndex.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/docker/mysql/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/docker/mysql/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/ib_logfile0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/docker/mysql/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/ibdata1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/groups.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/groups.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/languages.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/languages.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/migrations.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/migrations.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/password_resets.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/password_resets.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/projects.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/projects.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/ref_groups_translations.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/ref_groups_translations.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/ref_projects_translations.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/ref_projects_translations.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations.frm" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations.frm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations_entries.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations_entries.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/users.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/users.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/mysql/innodb_index_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/mysql/innodb_table_stats.ibd" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,12 +66,15 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/languages/languageEdit.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Services/Translations/TranslationService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="128" selection-start-line="19" selection-start-column="128" selection-end-line="19" selection-end-column="128" />
+            <state relative-caret-position="340">
+              <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
+              <folding>
+                <element signature="e#47#78#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Services/Languages/LanguageService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="81" column="82" selection-start-line="81" selection-start-column="82" selection-end-line="81" selection-end-column="82" />
+            <state relative-caret-position="569">
+              <caret line="69" column="29" lean-forward="true" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
               <folding>
                 <element signature="e#44#80#0#PHP" expanded="true" />
               </folding>
@@ -136,29 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/languages/languageIndex.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="97" selection-start-line="19" selection-start-column="97" selection-end-line="19" selection-end-column="97" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/nav.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/header.blade.php">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="221">
+              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -191,7 +128,6 @@
         <option value="$PROJECT_DIR$/app/Entites/CustomReadModel.php" />
         <option value="$PROJECT_DIR$/app/Entites/Translations/TranslationRM.php" />
         <option value="$PROJECT_DIR$/app/Entites/Translations/Entries/TranslationEntry.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Entities/Groups/Group.php" />
         <option value="$PROJECT_DIR$/app/Entities/Projects/Project.php" />
         <option value="$PROJECT_DIR$/app/Entities/Projects/ProjectRM.php" />
@@ -227,7 +163,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguageController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Entities/Languages/Language.php" />
-        <option value="$PROJECT_DIR$/app/Services/Translations/TranslationService.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/languages/languageCreate.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/translations/translationCreate.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/translations/translationEdit.blade.php" />
@@ -238,6 +173,8 @@
         <option value="$PROJECT_DIR$/app/Services/Languages/LanguageService.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/languages/languageIndex.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/Services/Translations/TranslationService.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -405,20 +342,7 @@
             <path>
               <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="admin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="storage" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -513,7 +437,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/languages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -567,18 +491,22 @@
       <workItem from="1563023337606" duration="412000" />
       <workItem from="1563092698288" duration="651000" />
       <workItem from="1563101445829" duration="16000" />
-      <workItem from="1563182637447" duration="16638000" />
+      <workItem from="1563182637447" duration="16756000" />
+      <workItem from="1563206773645" duration="42000" />
+      <workItem from="1563206830535" duration="13000" />
+      <workItem from="1563210218641" duration="11000" />
+      <workItem from="1563210467288" duration="75000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39226000" />
+    <option name="totallyTimeSpent" value="39485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="-8" width="1859" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16509172" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17009449" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -599,20 +527,37 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.32962757" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.24068928" />
+      <window_info anchor="right" id="Database" order="4" weight="0.24068928" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16509172" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32996973" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32996973" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50027794" side_tool="true" weight="0.32996973" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49972206" visible="true" weight="0.3319879" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32996973" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.32962757" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.24068928" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Entities/Groups/Group.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -696,13 +641,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/items.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config/items.php" />
     <entry file="file://$PROJECT_DIR$/app/Entities/Users/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -726,13 +665,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Translations/TranslationDestroyRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Translations/TranslationDestroyRequest.php" />
     <entry file="file://$PROJECT_DIR$/app/Services/CustomService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -887,16 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Translations/TranslationService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
-          <folding>
-            <element signature="e#47#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/LanguageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
@@ -959,27 +882,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/languages/languageEdit.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="128" selection-start-line="19" selection-start-column="128" selection-end-line="19" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Languages/LanguageService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="81" column="82" selection-start-line="81" selection-start-column="82" selection-end-line="81" selection-end-column="82" />
-          <folding>
-            <element signature="e#44#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/languages/languageIndex.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="97" selection-start-line="19" selection-start-column="97" selection-end-line="19" selection-end-column="97" />
+        <state relative-caret-position="342">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
@@ -990,10 +896,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/header.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/languages/languageIndex.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="323">
+          <caret line="19" column="97" selection-start-line="19" selection-start-column="97" selection-end-line="19" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/languages/languageEdit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="128" selection-start-line="19" selection-start-column="128" selection-end-line="19" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Translations/TranslationService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
+          <folding>
+            <element signature="e#47#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Languages/LanguageService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="69" column="29" lean-forward="true" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+          <folding>
+            <element signature="e#44#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
         </state>
       </provider>
     </entry>
