@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
+    protected $service;
+
     const ITEMS_PER_PAGE = 15;
 
     private static $view = 'admin';

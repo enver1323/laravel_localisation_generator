@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Translations;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -13,7 +13,7 @@ class TranslationStoreRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return $this->user() !== null;
     }
 
     /**
@@ -24,7 +24,7 @@ class TranslationStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'key' => 'required|string|max:255|min:3'
         ];
     }
 }

@@ -18,7 +18,7 @@ class CreateTranslationsTable extends Migration
              * Columns
              */
             $table->increments('id');
-            $table->string('key')->unique();
+            $table->string('key');
         });
     }
 

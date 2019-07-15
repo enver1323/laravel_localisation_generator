@@ -37,7 +37,7 @@
 
                     <!-- Begin Page Content -->
                     <div class="container-fluid">
-                        @include('admin.errors')
+                        @include('admin.status')
                         @yield('content')
                     </div>
                     <!-- /.container-fluid -->
@@ -60,7 +60,7 @@
             <i class="fas fa-angle-up"></i>
         </a>
 
-        <script src="{{ mix('js/admin.js','build') }}" defer></script>
+        <script src="{{ mix('js/admin.js','build') }}"></script>
         @yield('scripts')
     </body>
 </html>

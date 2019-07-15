@@ -25,25 +25,13 @@ Route::group([
 ], function (){
     Route::get('/', 'IndexController@index')->name('index');
 
-    Route::group([], function() {
-        Route::resource('translations', 'TranslationController');
-    });
-
-    Route::group([], function() {
-        Route::resource('languages', 'TranslationController');
-    });
-
-    Route::group([], function() {
-        Route::resource('projects', 'TranslationController');
-    });
-
-    Route::group([], function() {
-        Route::resource('groups', 'TranslationController');
-    });
-
-    Route::group([], function() {
-        Route::resource('users', 'TranslationController');
-    });
+    Route::resources([
+        'translations' => 'TranslationController',
+        'languages' => 'LanguageController',
+        'projects' => 'TranslationController',
+        'groups' => 'TranslationController',
+        'users' => 'TranslationController'
+    ]);
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

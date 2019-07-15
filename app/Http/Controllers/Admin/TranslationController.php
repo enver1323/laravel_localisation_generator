@@ -6,80 +6,78 @@ namespace App\Http\Controllers\Admin;
 
 
 
-use App\Entites\Languages\LanguageRM;
-use App\Entites\Translations\TranslationRM;
-use App\Http\Requests\TranslationStoreRequest;
-use App\Http\Requests\TranslationUpdateRequest;
+use App\Entities\Languages\LanguageRM;
+use App\Entities\Translations\Translation;
+use App\Entities\Translations\TranslationRM;
+use App\Http\Requests\Translations\TranslationSearchRequest;
+use App\Http\Requests\Translations\TranslationStoreRequest;
+use App\Http\Requests\Translations\TranslationUpdateRequest;
+use App\Services\Translations\TranslationService;
 
 class TranslationController extends AdminController
 {
-    private $translations;
-
     private $languages;
-
-    const VIEW_FOLDER = 'translations';
 
     private function getView(string $view): string
     {
-        return sprintf('%s.%s', self::VIEW_FOLDER, $view);
+        return sprintf('translations.%s', $view);
     }
 
-    public function __construct(TranslationRM $translations, LanguageRM $languageRM)
+    public function __construct(LanguageRM $languages, TranslationService $service)
     {
-        $this->translations = $translations;
-        $this->languages = $languageRM;
+        $this->service = $service;
+        $this->languages = $languages;
     }
 
-    public function index()
+    public function index(TranslationSearchRequest $request)
     {
-        return $this->render($this->getView('index'), [
-            'items' => $this->translations->getPaginated(self::ITEMS_PER_PAGE),
+        list($items, $queryObject) = $this->service->search($request, self::ITEMS_PER_PAGE);
+
+        return $this->render($this->getView('translationIndex'), [
+            'items' => $items->appends($request->input()),
             'langs' => $this->languages->getAll(),
+            'searchQuery' => $queryObject
         ]);
     }
 
     public function create()
     {
-        return $this->render($this->getView('create'));
+        return $this->render($this->getView('translationCreate'));
     }
 
-    public function store()
+    public function store(TranslationStoreRequest $request)
     {
-        /**
-         * Store translation logic
-         */
+        $this->service->create($request);
 
-        $item = $this->translations;
-
-        return redirect()->route('admin.translations.show', $item);
+        return redirect()->route('admin.translations.index');
     }
 
-    public function show(TranslationStoreRequest $request)
+    public function show(TranslationRM $translation)
     {
-        return $this->render($this->getView('create'));
-    }
-
-    public function edit(TranslationRM $translation)
-    {
-        return $this->render($this->getView('index'), [
+        return $this->render($this->getView('translationShow'), [
             'item' => $translation
         ]);
     }
 
-    public function update(TranslationUpdateRequest $request)
+    public function edit(TranslationRM $translation)
     {
-        /**
-         * Update translation logic
-         */
-
-        $item = $this->translations;
-
-        return redirect()->route('admin.translations.show', $item);
+        return $this->render($this->getView('translationEdit'), [
+            'item' => $translation
+        ]);
     }
 
-    public function destroy(Translation $item)
+    public function update(TranslationUpdateRequest $request, Translation $translation)
     {
-        $item->remove();
+        $this->service->update($request, $translation);
+
+        return redirect()->route('admin.translations.show', [
+            'item' => $translation
+        ]);
+    }
+
+    public function destroy(Translation $translation)
+    {
+        $this->service->destroy($translation);
 
         return redirect()->route('admin.translations.index');
     }
