@@ -5,7 +5,6 @@ namespace App\Entities\Languages;
 
 
 use App\Entities\CustomReadModel;
-use App\Entities\Translations\Entries\TranslationEntry;
 use App\Entities\Translations\TranslationRM;
 
 class LanguageRM extends Language implements CustomReadModel
@@ -27,12 +26,12 @@ class LanguageRM extends Language implements CustomReadModel
         return $this->paginate($itemsPerPage);
     }
 
-    public function getFilledPercentage()
+    public function getFilledPercentage(): int
     {
-        $entriesCount = TranslationEntry::count();
+        $entriesCount = TranslationRM::count();
 
         if($entriesCount)
-            return $this->entries()->count() / $entriesCount;
+            return $this->translations()->count() / $entriesCount * 100;
 
         return 0;
     }

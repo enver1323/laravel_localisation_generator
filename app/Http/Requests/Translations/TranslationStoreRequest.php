@@ -24,7 +24,8 @@ class TranslationStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'key' => 'required|string|max:255|min:3'
+            'key' => 'required|string|max:255|min:3|unique:translations,key',
+            'entries' => 'nullable|array',
         ];
     }
 }

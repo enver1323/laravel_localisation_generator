@@ -24,7 +24,8 @@ class LanguageStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'code' => 'required|alpha|max:2|unique:languages,code',
+            'name' => 'required|string|max:255',
         ];
     }
 }

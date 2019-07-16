@@ -24,8 +24,8 @@ class TranslationSearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'nullable|numeric',
-            'key' => 'nullable|string',
+            'id' => 'nullable|numeric|exists:translations,id',
+            'key' => 'nullable|string|exists:translations,key',
             'languages' => 'nullable|array'
         ];
     }

@@ -36,7 +36,8 @@
             @if($item->entries()->count())
                 <div class="row my-4">
                     <div class="col">
-                        <strong>Entries ({{$item->entries->count()}}): </strong>
+                        <hr>
+                        <h5>Entries ({{$item->entries->count()}}): </h5>
                     </div>
                 </div>
                 @foreach($item->entries as $entry)
@@ -51,7 +52,8 @@
             @if($item->groups()->count())
                 <div class="row my-4">
                     <div class="col">
-                        <strong>Groups ({{$item->groups->count()}}): </strong>
+                        <hr>
+                        <h5>Groups ({{$item->groups->count()}}): </h5>
                     </div>
                 </div>
                 @foreach($item->groups as $group)
@@ -68,7 +70,8 @@
             @if($item->projects()->count())
                 <div class="row my-4">
                     <div class="col">
-                        <strong>Projects ({{$item->projects->count()}}): </strong>
+                        <hr>
+                        <h5>Projects ({{$item->projects->count()}}): </h5>
                     </div>
                 </div>
                 @foreach($item->projects as $project)
@@ -82,6 +85,7 @@
                     </div>
                 @endforeach
             @endif
+            <hr>
         </div>
     </div>
 

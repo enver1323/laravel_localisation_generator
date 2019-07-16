@@ -9,9 +9,10 @@
     </div>
 @endif
 @if(session()->get('status'))
-    @php $status = session()->get('status') @endphp
-    <div class="alert alert-{{$status->type}} alert-dismissible fade show">
-        <strong>{{ucfirst($status->type)}}!</strong> {{$status->message}}.
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-    </div>
+    @foreach(session()->get('status') as $status)
+        <div class="alert alert-{{$status->type}} alert-dismissible fade show">
+            <strong>{{ucfirst($status->type)}}!</strong> {{$status->message}}.
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
+    @endforeach
 @endif

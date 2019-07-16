@@ -42,8 +42,8 @@ class LanguageService extends CustomService
         }
 
         if ($request->input('name')) {
-            $object->key = $request->input('name');
-            $query = $query->where('name', 'LIKE', "%$object->key%");
+            $object->name = $request->input('name');
+            $query = $query->where('name', 'LIKE', "%$object->name%");
         }
 
         if (!$query->count()) {

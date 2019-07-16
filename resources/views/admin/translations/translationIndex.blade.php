@@ -30,7 +30,7 @@
                         <select class="form-control" id="searchLangs" name="language_ids[]" multiple>
                             @foreach($langs as $lang)
                                 <option
-                                    value="{{$lang->id}}" {{in_array($searchQuery->languages, $lang->id) ? 'selected' : ''}}>
+                                    value="{{$lang->id}}" {{isset($searchQuery->languages) && in_array($searchQuery->languages, $lang->id) ? 'selected' : ''}}>
                                     {{$lang->name}}
                                 </option>
                             @endforeach
@@ -97,7 +97,8 @@
                                     <i class="fas fa-trash"></i>
                                 </button>
                             </td>
-                            <form id="{{$item->id}}-destroy-form" action="{{route('admin.translations.destroy', $item)}}" method="POST">
+                            <form id="{{$item->id}}-destroy-form"
+                                  action="{{route('admin.translations.destroy', $item)}}" method="POST">
                                 @method('DELETE') @csrf
                             </form>
                         </tr>

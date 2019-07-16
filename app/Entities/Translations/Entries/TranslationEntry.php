@@ -25,6 +25,14 @@ class TranslationEntry extends CustomModel
 {
     protected $table = 'translations_entries';
 
+    public function getByParams(int $translationId, string $languageCode): self
+    {
+        $item = $this->where('translation_id', '=', $translationId)
+            ->where('language_code', $languageCode)->first();
+
+        return isset($item) ? $item : $this;
+    }
+
     public function translation()
     {
         return $this->belongsTo(

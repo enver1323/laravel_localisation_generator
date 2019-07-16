@@ -11,17 +11,21 @@ use App\Http\Requests\Translations\TranslationSearchRequest;
 use App\Http\Requests\Translations\TranslationStoreRequest;
 use App\Http\Requests\Translations\TranslationUpdateRequest;
 use App\Services\CustomService;
+use Exception;
 use Illuminate\Database\Query\Builder;
+use Illuminate\Http\Request;
 
 class TranslationService extends CustomService
 {
     private $model;
     private $entity;
+    private $entryService;
 
-    public function __construct(Translation $entity, TranslationRM $model)
+    public function __construct(Translation $entity, TranslationRM $model, TranslationEntryService $entryService)
     {
         $this->model = $model;
         $this->entity = $entity;
+        $this->entryService = $entryService;
     }
 
     public function search(TranslationSearchRequest $request, int $itemsPerPage): array
@@ -70,6 +74,8 @@ class TranslationService extends CustomService
             'key' => $request->input('key')
         ]);
 
+        $this->saveEntries($request, $item);
+
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Translation \"$item->key\" was successfully created");
         return;
     }
@@ -78,6 +84,8 @@ class TranslationService extends CustomService
     {
         $item->key = $request->input('key');
         $item->save();
+
+        $this->saveEntries($request, $item);
 
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Translation \"$item->key\" was successfully modified");
         return;
@@ -89,5 +97,16 @@ class TranslationService extends CustomService
         $item->delete();
 
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Translation \"$key\" was successfully deleted");
+    }
+
+    protected function saveEntries(Request $request, Translation $translation): void
+    {
+        try {
+            if ($request->has('entries') && !empty($request->input('entries')))
+                $this->entryService->saveFromTranslation($request, $translation);
+        } catch (Exception $exception) {
+            $message = $exception->getMessage();
+            $this->fireStatusMessage(StatusMessage::TYPES['danger'], "Error with translation entries:\"$message\"");
+        }
     }
 }
