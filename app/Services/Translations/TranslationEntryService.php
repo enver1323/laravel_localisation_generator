@@ -7,7 +7,6 @@ namespace App\Services\Translations;
 use App\Entities\Translations\Entries\TranslationEntry;
 use App\Entities\Translations\Translation;
 use App\Services\CustomService;
-use Illuminate\Http\Request;
 
 class TranslationEntryService extends CustomService
 {
@@ -18,18 +17,17 @@ class TranslationEntryService extends CustomService
         $this->entity = $entity;
     }
 
-    public function saveFromTranslation(Request $request, Translation $translation): void
+    public function saveFromTranslation(array $entries, Translation $translation): void
     {
         $list = [];
 
-        foreach ($request->input('entries') as $key => $entry) {
-            $item = $this->entity->getByParams($translation->id, $key);
+        foreach ($entries as $key => $entry) {
+            $item = new $this->entity();
+            $item = $item->getByParams($translation->id, $key);
 
-            $item->fill([
-                'translation_id' => $translation->id,
-                'language_code' => $key,
-                'entry' => $entry
-            ]);
+            $item->translation_id = $translation->id;
+            $item->language_code = $key;
+            $item->entry = $entry;
 
             $list[] = $item;
         }

@@ -14,7 +14,10 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
+        $response = $this->post('/',[
+            'name' => 'russian',
+            'code' => 'ru'
+        ]);
 
         $response->assertStatus(200);
     }

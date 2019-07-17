@@ -13,7 +13,7 @@ class TranslationSearchRequest extends FormRequest
      */
     public function authorize()
     {
-        return $this->user();
+        return true;
     }
 
     /**
@@ -24,8 +24,8 @@ class TranslationSearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'nullable|numeric|exists:translations,id',
-            'key' => 'nullable|string|exists:translations,key',
+            'id' => 'nullable|numeric',
+            'key' => 'nullable|string',
             'languages' => 'nullable|array'
         ];
     }

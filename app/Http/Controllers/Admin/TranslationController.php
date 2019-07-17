@@ -34,7 +34,7 @@ class TranslationController extends AdminController
         list($items, $queryObject) = $this->service->search($request, self::ITEMS_PER_PAGE);
 
         return $this->render($this->getView('translationIndex'), [
-            'items' => $items->appends($request->input()),
+            'items' => $items,
             'langs' => $this->languages->getAll(),
             'searchQuery' => $queryObject
         ]);

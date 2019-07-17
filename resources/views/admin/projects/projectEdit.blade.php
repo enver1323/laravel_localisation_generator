@@ -31,6 +31,27 @@
                         </textarea>
                     </div>
                 </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-3 col-lg-2">
+                        <label for="searchField">Choose groups to add</label>
+                    </div>
+                    <div class="col-md-9 col-lg-10">
+                        <div class="col-md-8 col-lg-6 p-0" id="groupsContainer">
+                            <input id="searchField" type="text" class="form-control mb-4"
+                                   onkeyup="getGroupNames(this.value)">
+                            @foreach($item->groups as $group)
+                                <div class="form-check">
+                                    <input class="form-check-input groupCheckbox" id="group-{{$group->id}}"
+                                           onclick="removeItem(this)" name="groups[]" value="{{$group->id}}"
+                                           type="checkbox" checked>
+                                    <label for="group-{{$group->id}}">Group: {{$group->name}}</label>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+
                 <input type="submit" class="btn btn-success" value="Update">
                 @csrf
             </form>
@@ -39,7 +60,5 @@
 @endsection
 @section('scripts')
     <script src="{{asset('js/admin/ckeditor/ckeditor.js')}}"></script>
-    <script type="text/javascript">
-        CKEDITOR.replace('projectDesc');
-    </script>
+    <script src="{{asset('js/admin/addGroups.js')}}"></script>
 @endsection

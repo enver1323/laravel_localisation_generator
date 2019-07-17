@@ -28,7 +28,17 @@
                         </textarea>
                     </div>
                 </div>
-                <input type="submit" class="btn btn-success" value="save">
+                <div class="row mb-4">
+                    <div class="col-md-3 col-lg-2">
+                        <label for="searchField">Choose group to add</label>
+                    </div>
+                    <div class="col-md-9 col-lg-10">
+                        <div class="col-md-8 col-lg-6 p-0" id="groupsContainer">
+                            <input id="searchField" type="text" class="form-control mb-4" onkeyup="getGroupNames(this.value)">
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-success" value="Save">
                 @csrf
             </form>
         </div>
@@ -36,7 +46,5 @@
 @endsection
 @section('scripts')
     <script src="{{asset('js/admin/ckeditor/ckeditor.js')}}"></script>
-    <script type="text/javascript">
-        CKEDITOR.replace('projectDesc');
-    </script>
+    <script src="{{asset('js/admin/addGroups.js')}}"></script>
 @endsection

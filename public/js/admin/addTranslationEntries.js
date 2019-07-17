@@ -14,8 +14,10 @@ function addEntry() {
 function isEntryNotCreated(option){
     var list = document.getElementsByClassName('entryInput');
     for(var i = 0; i < list.length; i++){
-        if(list[i].name.split('[')[1] === (option.value + ']'))
+        if(list[i].name.split('[')[1] === (option.value + ']')){
+            select.removeChild(option);
             return false;
+        }
     }
 
     return true;
@@ -50,6 +52,8 @@ function addEntryField(option){
 
     form.appendChild(row);
     form.insertBefore(row, selectContainer);
+
+    select.removeChild(option);
 }
 
 function setAttributes(elem, attrs){

@@ -16,3 +16,12 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group([
+    'prefix' => 'ajax',
+    'as' => 'api.ajax.',
+    'namespace' => 'API'
+], function () {
+    Route::get('translations', 'AjaxController@getTranslations')->middleware('throttle:60,1')->name('translations');
+    Route::get('groups', 'AjaxController@getGroups')->middleware('throttle:60,1')->name('groups');
+});

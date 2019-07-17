@@ -11,6 +11,8 @@ use App\Http\Requests\Projects\ProjectSearchRequest;
 use App\Http\Requests\Projects\ProjectStoreRequest;
 use App\Http\Requests\Projects\ProjectUpdateRequest;
 use App\Services\CustomService;
+use App\Services\Groups\GroupService;
+use Exception;
 
 class ProjectService extends CustomService
 {
@@ -61,6 +63,8 @@ class ProjectService extends CustomService
             'description' => $request->input('description')
         ]);
 
+        $this->saveGroups($request->input('groups'), $item);
+
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Project \"$item->name\" was successfully created");
         return;
     }
@@ -68,7 +72,10 @@ class ProjectService extends CustomService
     public function update(ProjectUpdateRequest $request, Project $item): void
     {
         $item->name = $request->input('name');
+        $item->description = $request->input('description');
         $item->save();
+
+        $this->saveGroups($request->input('groups'), $item);
 
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Project \"$item->name\" was successfully modified");
         return;
@@ -80,5 +87,21 @@ class ProjectService extends CustomService
         $item->delete();
 
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Project \"$name\" was successfully deleted");
+    }
+
+    public function export(ProjectRM $project)
+    {
+        dd($project->groups . PHP_EOL . $project->groups[0]->translations);
+    }
+
+    private function saveGroups(?array $groups, Project $project)
+    {
+        try{
+            if(isset($groups) && !empty($groups))
+            $project->groups()->sync($groups);
+        }catch (Exception $exception){
+            $message = $exception->getMessage();
+            $this->fireStatusMessage(StatusMessage::TYPES['danger'], "Groups error:\"$message\"");
+        }
     }
 }

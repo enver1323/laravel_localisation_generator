@@ -67,24 +67,6 @@
                     </div>
                 @endforeach
             @endif
-            @if($item->projects()->count())
-                <div class="row my-4">
-                    <div class="col">
-                        <hr>
-                        <h5>Projects ({{$item->projects->count()}}): </h5>
-                    </div>
-                </div>
-                @foreach($item->projects as $project)
-                    <div class="row my-4">
-                        <div class="col">
-                            <strong>{{$project->id}}: </strong>
-                            <span>{{$project->name}}</span>
-                            <br/>
-                            <span>{{$project->description}}</span>
-                        </div>
-                    </div>
-                @endforeach
-            @endif
             <hr>
         </div>
     </div>

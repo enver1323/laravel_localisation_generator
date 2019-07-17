@@ -28,7 +28,7 @@ class ProjectController extends AdminController
         list($items, $queryObject) = $this->service->search($request, self::ITEMS_PER_PAGE);
 
         return $this->render($this->getView('projectIndex'), [
-            'items' => $items->appends($request->input()),
+            'items' => $items,
             'searchQuery' => $queryObject,
         ]);
     }
@@ -71,6 +71,13 @@ class ProjectController extends AdminController
     public function destroy(Project $project)
     {
         $this->service->destroy($project);
+
+        return redirect()->route('admin.projects.index');
+    }
+
+    public function export(ProjectRM $project)
+    {
+        $this->service->export($project);
 
         return redirect()->route('admin.projects.index');
     }

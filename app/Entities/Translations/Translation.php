@@ -43,15 +43,6 @@ class Translation extends CustomModel
             'group_id');
     }
 
-    public function projects()
-    {
-        return $this->belongsToMany(
-            Project::class,
-            'ref_projects_translations',
-            'translation_id',
-            'project_id');
-    }
-
     public function languages()
     {
         return $this->belongsToMany(Language::class,

@@ -5,7 +5,7 @@ namespace App\Entities\Projects;
 
 
 use App\Entities\CustomModel;
-use App\Entities\Translations\Translation;
+use App\Entities\Groups\Group;
 use Illuminate\Support\Collection;
 
 /**
@@ -17,7 +17,7 @@ use Illuminate\Support\Collection;
  * @property string $description
  *
  * Relations:
- * @property Collection $translations
+ * @property Collection $groups
  */
 class Project extends CustomModel
 {
@@ -33,13 +33,13 @@ class Project extends CustomModel
         return $desc;
     }
 
-    public function translations()
+    public function groups()
     {
         return $this->belongsToMany(
-            Translation::class,
-            'ref_projects_translations',
+            Group::class,
+            'ref_projects_groups',
             'project_id',
-            'translation_id'
+            'group_id'
         );
     }
 }

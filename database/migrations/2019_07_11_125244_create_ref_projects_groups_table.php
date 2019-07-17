@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRefProjectsTranslationsTable extends Migration
+class CreateRefProjectsGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateRefProjectsTranslationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ref_projects_translations', function (Blueprint $table) {
+        Schema::create('ref_projects_groups', function (Blueprint $table) {
             /**
              * Columns
              */
             $table->integer('project_id')->unsigned();
-            $table->integer('translation_id')->unsigned();
+            $table->integer('group_id')->unsigned();
 
             /**
              * Foreign keys
@@ -27,8 +27,8 @@ class CreateRefProjectsTranslationsTable extends Migration
                 ->on('projects')
                 ->references('id')
                 ->onDelete('cascade');
-            $table->foreign('translation_id')
-                ->on('translations')
+            $table->foreign('group_id')
+                ->on('groups')
                 ->references('id')
                 ->onDelete('cascade');
         });
@@ -41,6 +41,6 @@ class CreateRefProjectsTranslationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ref_project_translations');
+        Schema::dropIfExists('ref_projects_groups');
     }
 }

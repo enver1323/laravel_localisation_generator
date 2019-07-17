@@ -24,8 +24,8 @@ class ProjectSearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'nullable|numeric|exists:projects,id',
-            'name' => 'nullable|string|exists:projects,name'
+            'id' => 'nullable|numeric',
+            'name' => 'nullable|string'
         ];
     }
 }

@@ -28,7 +28,7 @@ class LanguageController extends AdminController
         list($items, $queryObject) = $this->service->search($request, self::ITEMS_PER_PAGE);
 
         return $this->render($this->getView('languageIndex'), [
-            'items' => $items->appends($request->input()),
+            'items' => $items,
             'searchQuery' => $queryObject,
         ]);
     }

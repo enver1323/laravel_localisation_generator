@@ -1,12 +1,10 @@
 @if($errors->any())
-    <div class="alert alert-danger alert-dismissible fade show">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <strong>Error!</strong> {{$error}}
-            @endforeach
-        </ul>
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-    </div>
+    @foreach($errors->all() as $error)
+        <div class="alert alert-danger alert-dismissible fade show">
+            <strong>Error!</strong> {{$error}}
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        </div>
+    @endforeach
 @endif
 @if(session()->get('status'))
     @foreach(session()->get('status') as $status)

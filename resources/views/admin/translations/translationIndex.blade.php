@@ -30,7 +30,7 @@
                         <select class="form-control" id="searchLangs" name="language_ids[]" multiple>
                             @foreach($langs as $lang)
                                 <option
-                                    value="{{$lang->id}}" {{isset($searchQuery->languages) && in_array($searchQuery->languages, $lang->id) ? 'selected' : ''}}>
+                                    value="{{$lang->code}}" {{isset($searchQuery->languages) && in_array($searchQuery->languages, [$lang->code]) ? 'selected' : ''}}>
                                     {{$lang->name}}
                                 </option>
                             @endforeach

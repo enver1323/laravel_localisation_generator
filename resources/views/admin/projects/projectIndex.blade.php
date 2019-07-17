@@ -72,6 +72,11 @@
                                 {!! $item->getShortDescription() !!}
                             </td>
                             <td>
+                                <a href="{{route('admin.projects.export', $item)}}">
+                                    <button class="btn btn-sm btn-primary">
+                                        <i class="fas fa-upload"></i>
+                                    </button>
+                                </a>
                                 <a href="{{route('admin.projects.edit', $item)}}">
                                     <button class="btn btn-sm btn-warning">
                                         <i class="fas fa-edit"></i>

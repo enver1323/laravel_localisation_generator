@@ -2,8 +2,11 @@
 @section('content')
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">{{$item->name}} language</h1>
+        <h1 class="h3 mb-0 text-gray-800">{{$item->name}} project</h1>
         <div class="div">
+            <a href="{{route('admin.projects.export', $item)}}" class="btn btn-primary shadow-sm">
+                <i class="fas fa-upload"></i> Upload
+            </a>
             <a href="{{route('admin.projects.edit', $item)}}" class="btn btn-warning shadow-sm">
                 <i class="fas fa-edit fa-sm text-white-50"></i> Edit
             </a>
@@ -33,21 +36,23 @@
                     {!! $item->description!!}
                 </div>
             </div>
-            @if($item->translations()->count())
+            @if($item->groups()->count())
+                <hr>
                 <div class="row my-4">
                     <div class="col">
-                        <strong>Translations ({{$item->translations->count()}}): </strong>
+                        <strong>Groups ({{$item->groups->count()}}): </strong>
                     </div>
                 </div>
-                @foreach($item->translations as $translation)
+                @foreach($item->groups as $group)
                     <div class="row my-4">
                         <div class="col">
-                            <strong>ID: </strong>
-                            <span>{{$translation->key}}</span>
+                            <strong>ID - {{$group->id}}: </strong>
+                            <span>Name - {{$group->name}}</span>
                         </div>
                     </div>
                 @endforeach
             @endif
+            <hr>
         </div>
     </div>
 

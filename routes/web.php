@@ -29,9 +29,11 @@ Route::group([
         'translations' => 'TranslationController',
         'languages' => 'LanguageController',
         'projects' => 'ProjectController',
-        'groups' => 'TranslationController',
+        'groups' => 'GroupController',
         'users' => 'TranslationController'
     ]);
+
+    Route::get('projects/{project}/export', 'ProjectController@export')->name('projects.export');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

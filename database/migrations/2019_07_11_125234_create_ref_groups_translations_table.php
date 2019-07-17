@@ -41,6 +41,6 @@ class CreateRefGroupsTranslationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ref_project_translations');
+        Schema::dropIfExists('ref_groups_translations');
     }
 }
