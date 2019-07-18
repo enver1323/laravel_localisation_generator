@@ -4,8 +4,8 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">{{$item->name}} project</h1>
         <div class="div">
-            <a href="{{route('admin.projects.export', $item)}}" class="btn btn-primary shadow-sm">
-                <i class="fas fa-upload"></i> Upload
+            <a href="{{route('admin.projects.export.show', $item)}}" class="btn btn-primary shadow-sm">
+                <i class="fas fa-upload"></i> Export
             </a>
             <a href="{{route('admin.projects.edit', $item)}}" class="btn btn-warning shadow-sm">
                 <i class="fas fa-edit fa-sm text-white-50"></i> Edit

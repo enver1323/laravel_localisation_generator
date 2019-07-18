@@ -14,7 +14,8 @@
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "stripe/stripe-php": "^6.40",
-        "yandex-money/yandex-checkout-sdk-php": "^1.2"
+        "yandex-money/yandex-checkout-sdk-php": "^1.2",
+        "ext-zip": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

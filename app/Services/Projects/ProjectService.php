@@ -7,6 +7,7 @@ namespace App\Services\Projects;
 use App\Entities\Projects\Project;
 use App\Entities\Projects\ProjectRM;
 use App\Entities\StatusMessage;
+use App\Http\Requests\Projects\ProjectExportRequest;
 use App\Http\Requests\Projects\ProjectSearchRequest;
 use App\Http\Requests\Projects\ProjectStoreRequest;
 use App\Http\Requests\Projects\ProjectUpdateRequest;
@@ -18,11 +19,13 @@ class ProjectService extends CustomService
 {
     private $model;
     private $entity;
+    private $exportService;
 
-    public function __construct(Project $entity, ProjectRM $model)
+    public function __construct(Project $entity, ProjectRM $model, ProjectExportService $exportService)
     {
         $this->model = $model;
         $this->entity = $entity;
+        $this->exportService = $exportService;
     }
 
     public function search(ProjectSearchRequest $request, int $itemsPerPage): array
@@ -89,9 +92,17 @@ class ProjectService extends CustomService
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Project \"$name\" was successfully deleted");
     }
 
-    public function export(ProjectRM $project)
+    public function export(ProjectExportRequest $request, ProjectRM $project): ?string
     {
-        dd($project->groups . PHP_EOL . $project->groups[0]->translations);
+        if($request->input('type') === ProjectExportService::$types['json'])
+            $path = $this->exportService->json($project, $request->input('languages'));
+
+        if($request->input('type') === ProjectExportService::$types['archive'])
+            $path = $this->exportService->archive($project, $request->input('languages'));
+
+        $this->fireStatusMessage(StatusMessage::TYPES['success'], 'File was successfully generated');
+
+        return $path;
     }
 
     private function saveGroups(?array $groups, Project $project)

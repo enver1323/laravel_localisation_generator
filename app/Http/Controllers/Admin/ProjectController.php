@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Entities\Projects\Project;
 use App\Entities\Projects\ProjectRM;
+use App\Http\Requests\Projects\ProjectExportRequest;
 use App\Http\Requests\Projects\ProjectSearchRequest;
 use App\Http\Requests\Projects\ProjectStoreRequest;
 use App\Http\Requests\Projects\ProjectUpdateRequest;
@@ -75,10 +76,18 @@ class ProjectController extends AdminController
         return redirect()->route('admin.projects.index');
     }
 
-    public function export(ProjectRM $project)
+    public function setUpExport(ProjectRM $project)
     {
-        $this->service->export($project);
+        return $this->render($this->getView('projectExport'), [
+            'item' => $project,
+            'languages' => $project->getLanguages()
+        ]);
+    }
 
-        return redirect()->route('admin.projects.index');
+    public function export(ProjectExportRequest $request, ProjectRM $project)
+    {
+        $path = $this->service->export($request, $project);
+
+        return response()->download($path)->deleteFileAfterSend();
     }
 }

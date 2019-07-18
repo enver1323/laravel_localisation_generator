@@ -33,7 +33,18 @@ Route::group([
         'users' => 'TranslationController'
     ]);
 
-    Route::get('projects/{project}/export', 'ProjectController@export')->name('projects.export');
+    Route::group([
+        'prefix' => 'projects',
+        'as' => 'projects.'
+    ], function (){
+        Route::group([
+            'prefix' => 'export/{project}',
+            'as' => 'export.'
+        ],function(){
+            Route::get('/', 'ProjectController@setUpExport')->name('show');
+            Route::post('/', 'ProjectController@export')->name('file');
+        });
+    });
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
