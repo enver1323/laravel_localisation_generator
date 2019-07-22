@@ -27,7 +27,7 @@ class GroupStoreRequest extends FormRequest
             'name' => 'required|string|max:255|unique:groups,name',
             'description' => 'required|string',
             'translations' => 'nullable|array',
-            'translations.*' => 'nullable|numeric|exists:translations,id'
+            'translations.*' => 'numeric|exists:translations,id'
         ];
     }
 }

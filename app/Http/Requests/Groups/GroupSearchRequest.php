@@ -25,7 +25,7 @@ class GroupSearchRequest extends FormRequest
     {
         return [
             'id' => 'nullable|numeric',
-            'name' => 'nullable|string'
+            'name' => 'nullable|string|max:255'
         ];
     }
 }

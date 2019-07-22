@@ -30,7 +30,7 @@ Route::group([
         'languages' => 'LanguageController',
         'projects' => 'ProjectController',
         'groups' => 'GroupController',
-        'users' => 'TranslationController'
+        'users' => 'UserController'
     ]);
 
     Route::group([

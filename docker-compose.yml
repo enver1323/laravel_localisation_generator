@@ -1,6 +1,7 @@
 version: '2'
 services:
   nginx:
+    container_name: nginx
     build:
       context: ./
       dockerfile: docker/nginx.docker
@@ -12,6 +13,7 @@ services:
     links:
       - php-fpm
   php-fpm:
+    container_name: php_fpm
     build:
       context: ./
       dockerfile: docker/php-fpm.docker
@@ -26,6 +28,7 @@ services:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
   php-cli:
+    container_name: php_cli
     build:
       context: ./
       dockerfile: docker/php-fpm.docker
@@ -40,21 +43,24 @@ services:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
   mysql:
+    container_name: db
     image: mysql:5.7
     volumes:
       - ./storage/docker/mysql:/var/lib/mysql
     environment:
-      - "MYSQL_ROOT_PASSWORD=123"
-      - "MYSQL_USER=root"
-      - "MYSQL_PASSWORD=123"
-      - "MYSQL_DATABASE=localization_generator"
+      MYSQL_ROOT_PASSWORD: cderfv34
+      MYSQL_USER: root
+      MYSQL_PASSWORD: cderfv34
+      MYSQL_DATABASE: locale_gen
     ports:
       - "33061:3306"
   redis:
+    container_name: redis
     image: redis:3.0
     ports:
       - "63791:6379"
   node:
+    container_name: node
     build:
       context: ./
       dockerfile: docker/node.docker

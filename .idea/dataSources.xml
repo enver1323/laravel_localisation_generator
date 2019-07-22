@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="localization_generator@localhost" uuid="5937306e-711d-4cdd-8ba7-2d34bc7591ec">
+    <data-source source="LOCAL" name="locale_gen@localhost" uuid="0f1140ea-0d59-4d78-bb43-60d08164d1a8">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:33061/localization_generator</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:33061/locale_gen</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />

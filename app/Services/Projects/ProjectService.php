@@ -94,6 +94,8 @@ class ProjectService extends CustomService
 
     public function export(ProjectExportRequest $request, ProjectRM $project): ?string
     {
+        $path = '';
+
         if($request->input('type') === ProjectExportService::$types['json'])
             $path = $this->exportService->json($project, $request->input('languages'));
 
@@ -105,7 +107,7 @@ class ProjectService extends CustomService
         return $path;
     }
 
-    private function saveGroups(?array $groups, Project $project)
+    private function saveGroups(?array $groups, Project $project): void
     {
         try{
             if(isset($groups) && !empty($groups))

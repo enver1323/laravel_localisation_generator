@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Languages;
+namespace App\Http\Requests\Users;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LanguageSearchRequest extends FormRequest
+class UserStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class LanguageSearchRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return $this->user();
     }
 
     /**
@@ -24,8 +24,9 @@ class LanguageSearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'code' => 'nullable|alpha|max:2',
-            'name' => 'nullable|string|max:255',
+            'name' => 'required|string|max:255|min:4|unique:users,name',
+            'email' => 'required|string|email|max:255|unique:users,email',
+            'password' => 'required|alpha_num|min:8|max:255|confirmed'
         ];
     }
 }

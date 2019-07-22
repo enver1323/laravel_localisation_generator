@@ -40,14 +40,18 @@ class TranslationService extends CustomService
 
     private function formSearch(TranslationSearchRequest $request, TranslationRM $query, $object): array
     {
+        $found = false;
+
         if ($request->input('id')) {
             $object->id = $request->input('id');
             $query = $query->where('id', '=', $request->input('id'));
+            $found = true;
         }
 
         if ($request->input('key')) {
             $object->key = $request->input('key');
             $query = $query->where('key', 'LIKE', "%$object->key%");
+            $found = true;
         }
 
         if ($request->input('language_ids') && !empty($request->input('language_ids'))) {
@@ -57,12 +61,15 @@ class TranslationService extends CustomService
                 $query = $query->whereHas('languages', function (Builder $query) use ($language) {
                     $query->where('code', '=', $language);
                 });
+
+            $found = true;
         }
 
-        if (!$query->count()) {
+        if (!$found) {
             $query = $this->model;
             $this->fireStatusMessage(StatusMessage::TYPES['warning'], 'Nothing was found according to your query');
-        }
+        }else
+            $this->fireStatusMessage(StatusMessage::TYPES['success'], sprintf('%d results were found', $query->count()));
 
         return [$query, $object];
     }

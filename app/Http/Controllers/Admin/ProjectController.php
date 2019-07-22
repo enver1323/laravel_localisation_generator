@@ -11,6 +11,7 @@ use App\Http\Requests\Projects\ProjectSearchRequest;
 use App\Http\Requests\Projects\ProjectStoreRequest;
 use App\Http\Requests\Projects\ProjectUpdateRequest;
 use App\Services\Projects\ProjectService;
+use Illuminate\View\View;
 
 class ProjectController extends AdminController
 {
@@ -24,7 +25,7 @@ class ProjectController extends AdminController
         $this->service = $service;
     }
 
-    public function index(ProjectSearchRequest $request)
+    public function index(ProjectSearchRequest $request): View
     {
         list($items, $queryObject) = $this->service->search($request, self::ITEMS_PER_PAGE);
 
@@ -34,7 +35,7 @@ class ProjectController extends AdminController
         ]);
     }
 
-    public function create()
+    public function create(): View
     {
         return $this->render($this->getView('projectCreate'));
     }
@@ -46,14 +47,14 @@ class ProjectController extends AdminController
         return redirect()->route('admin.projects.index');
     }
 
-    public function show(ProjectRM $project)
+    public function show(ProjectRM $project): View
     {
         return $this->render($this->getView('projectShow'), [
             'item' => $project
         ]);
     }
 
-    public function edit(ProjectRM $project)
+    public function edit(ProjectRM $project): View
     {
         return $this->render($this->getView('projectEdit'), [
             'item' => $project
@@ -76,7 +77,7 @@ class ProjectController extends AdminController
         return redirect()->route('admin.projects.index');
     }
 
-    public function setUpExport(ProjectRM $project)
+    public function setUpExport(ProjectRM $project): View
     {
         return $this->render($this->getView('projectExport'), [
             'item' => $project,

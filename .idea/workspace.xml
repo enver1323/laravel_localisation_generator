@@ -2,26 +2,340 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fefa86fb-a92e-41fc-9100-761d2f89f14d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Services/Projects/ProjectExportService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/projects/projectExport.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/userCreate.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/userEdit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/userIndex.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/userShow.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/FeatureTestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/Translations/TranslationFeatureTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5937306e-711d-4cdd-8ba7-2d34bc7591ec.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/localization_generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/localization_generator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Projects/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entities/Projects/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpstorm.meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ide_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/_ide_helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Groups/GroupSearchRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Groups/GroupSearchRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Groups/GroupStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Groups/GroupStoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageSearchRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageSearchRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Projects/ProjectExportService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Projects/ProjectExportService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Services/Projects/ProjectService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Projects/ProjectService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Translations/TranslationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Translations/TranslationService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/Users/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Users/UserService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/default.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/php-fpm.docker" beforeDir="false" afterPath="$PROJECT_DIR$/docker/php-fpm.docker" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/projectIndex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/projectIndex.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/projectShow.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/projectShow.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/ib_buffer_pool" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/ib_logfile0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/ibdata1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/ref_groups_translations.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/ref_groups_translations.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations_entries.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations_entries.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/innodb_index_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/mysql/innodb_index_stats.ibd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/innodb_table_stats.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/storage/docker/mysql/mysql/innodb_table_stats.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/auto.cnf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/ca-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/ca.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/client-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/client-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/ib_buffer_pool" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/ib_logfile0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/ib_logfile1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/ibdata1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/db.opt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/groups.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/groups.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/languages.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/languages.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/migrations.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/migrations.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/password_resets.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/password_resets.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/projects.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/projects.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/ref_groups_translations.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/ref_groups_translations.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations_entries.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/translations_entries.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/users.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/localization_generator/users.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/columns_priv.MYD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/columns_priv.MYI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/columns_priv.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/db.MYD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/db.MYI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/db.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/db.opt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/engine_cost.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/engine_cost.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/event.MYD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/event.MYI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/event.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/func.MYD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/func.MYI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/func.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/general_log.CSM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/general_log.CSV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/general_log.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/gtid_executed.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/gtid_executed.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/help_category.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/help_category.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/help_keyword.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/help_keyword.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/help_relation.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/help_relation.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/help_topic.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/help_topic.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/innodb_index_stats.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/innodb_index_stats.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/innodb_table_stats.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/innodb_table_stats.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/ndb_binlog_index.MYD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/ndb_binlog_index.MYI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/ndb_binlog_index.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/plugin.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/plugin.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/proc.MYD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/proc.MYI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/proc.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/procs_priv.MYD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/procs_priv.MYI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/procs_priv.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/proxies_priv.MYD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/proxies_priv.MYI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/proxies_priv.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/server_cost.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/server_cost.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/servers.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/servers.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/slave_master_info.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/slave_master_info.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/slave_relay_log_info.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/slave_relay_log_info.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/slave_worker_info.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/slave_worker_info.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/slow_log.CSM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/slow_log.CSV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/slow_log.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/tables_priv.MYD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/tables_priv.MYI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/tables_priv.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/time_zone.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/time_zone.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/time_zone_leap_second.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/time_zone_leap_second.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/time_zone_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/time_zone_name.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/time_zone_transition.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/time_zone_transition.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/time_zone_transition_type.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/time_zone_transition_type.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/user.MYD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/user.MYI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/mysql/user.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/accounts.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/cond_instances.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/db.opt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_stages_current.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_stages_history.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_stages_history_long.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_stages_summary_by_account_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_stages_summary_by_host_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_stages_summary_by_thread_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_stages_summary_by_user_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_stages_summary_global_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_statements_current.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_statements_history.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_statements_history_long.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_statements_summary_by_account_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_statements_summary_by_digest.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_statements_summary_by_host_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_statements_summary_by_program.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_statements_summary_by_thread_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_statements_summary_by_user_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_statements_summary_global_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_transactions_current.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_transactions_history.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_transactions_history_long.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_transactions_summary_by_account_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_transactions_summary_by_host_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_transactions_summary_by_thread_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_transactions_summary_by_user_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_transactions_summary_global_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_waits_current.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_waits_history.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_waits_history_long.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_waits_summary_by_account_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_waits_summary_by_host_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_waits_summary_by_instance.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_waits_summary_by_thread_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_waits_summary_by_user_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/events_waits_summary_global_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/file_instances.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/file_summary_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/file_summary_by_instance.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/global_status.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/global_variables.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/host_cache.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/hosts.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/memory_summary_by_account_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/memory_summary_by_host_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/memory_summary_by_thread_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/memory_summary_by_user_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/memory_summary_global_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/metadata_locks.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/mutex_instances.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/objects_summary_global_by_type.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/performance_timers.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/prepared_statements_instances.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/replication_applier_configuration.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/replication_applier_status.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/replication_applier_status_by_coordinator.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/replication_applier_status_by_worker.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/replication_connection_configuration.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/replication_connection_status.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/replication_group_member_stats.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/replication_group_members.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/rwlock_instances.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/session_account_connect_attrs.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/session_connect_attrs.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/session_status.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/session_variables.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/setup_actors.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/setup_consumers.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/setup_instruments.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/setup_objects.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/setup_timers.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/socket_instances.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/socket_summary_by_event_name.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/socket_summary_by_instance.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/status_by_account.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/status_by_host.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/status_by_thread.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/status_by_user.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/table_handles.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/table_io_waits_summary_by_index_usage.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/table_io_waits_summary_by_table.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/table_lock_waits_summary_by_table.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/threads.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/user_variables_by_thread.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/users.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/performance_schema/variables_by_thread.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/private_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/public_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/server-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/server-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/db.opt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/host_summary.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/host_summary_by_file_io.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/host_summary_by_file_io_type.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/host_summary_by_stages.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/host_summary_by_statement_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/host_summary_by_statement_type.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/innodb_buffer_stats_by_schema.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/innodb_buffer_stats_by_table.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/innodb_lock_waits.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/io_by_thread_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/io_global_by_file_by_bytes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/io_global_by_file_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/io_global_by_wait_by_bytes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/io_global_by_wait_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/latest_file_io.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/memory_by_host_by_current_bytes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/memory_by_thread_by_current_bytes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/memory_by_user_by_current_bytes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/memory_global_by_current_bytes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/memory_global_total.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/metrics.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/processlist.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/ps_check_lost_instrumentation.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/schema_auto_increment_columns.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/schema_index_statistics.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/schema_object_overview.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/schema_redundant_indexes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/schema_table_lock_waits.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/schema_table_statistics.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/schema_table_statistics_with_buffer.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/schema_tables_with_full_table_scans.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/schema_unused_indexes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/session.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/session_ssl_status.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/statement_analysis.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/statements_with_errors_or_warnings.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/statements_with_full_table_scans.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/statements_with_runtimes_in_95th_percentile.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/statements_with_sorting.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/statements_with_temp_tables.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/sys_config.TRG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/sys_config.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/sys_config.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/sys_config_insert_set_user.TRN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/sys_config_update_set_user.TRN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/user_summary.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/user_summary_by_file_io.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/user_summary_by_file_io_type.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/user_summary_by_stages.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/user_summary_by_statement_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/user_summary_by_statement_type.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/version.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/wait_classes_global_by_avg_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/wait_classes_global_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/waits_by_host_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/waits_by_user_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/waits_global_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024host_summary.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024host_summary_by_file_io.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024host_summary_by_file_io_type.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024host_summary_by_stages.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024host_summary_by_statement_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024host_summary_by_statement_type.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024innodb_buffer_stats_by_schema.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024innodb_buffer_stats_by_table.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024innodb_lock_waits.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024io_by_thread_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024io_global_by_file_by_bytes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024io_global_by_file_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024io_global_by_wait_by_bytes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024io_global_by_wait_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024latest_file_io.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024memory_by_host_by_current_bytes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024memory_by_thread_by_current_bytes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024memory_by_user_by_current_bytes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024memory_global_by_current_bytes.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024memory_global_total.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024processlist.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024ps_digest_95th_percentile_by_avg_us.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024ps_digest_avg_latency_distribution.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024ps_schema_table_statistics_io.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024schema_flattened_keys.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024schema_index_statistics.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024schema_table_lock_waits.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024schema_table_statistics.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024schema_table_statistics_with_buffer.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024schema_tables_with_full_table_scans.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024session.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024statement_analysis.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024statements_with_errors_or_warnings.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024statements_with_full_table_scans.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024statements_with_runtimes_in_95th_percentile.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024statements_with_sorting.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024statements_with_temp_tables.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024user_summary.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024user_summary_by_file_io.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024user_summary_by_file_io_type.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024user_summary_by_stages.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024user_summary_by_statement_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024user_summary_by_statement_type.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024wait_classes_global_by_avg_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024wait_classes_global_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024waits_by_host_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024waits_by_user_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/docker/mysql/sys/x@0024waits_global_by_latency.frm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/Requests/Languages/LanguageStoreTest.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,105 +363,56 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="localization_generator@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="locale_gen@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="localization_generator@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="locale_gen@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="localization_generator@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="locale_gen@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="localization_generator: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="localization_generator@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="localization_generator: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="locale_gen: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="localization_generator" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/projects/projectShow.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Entities/Projects/Project.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-              <folding>
-                <element signature="e#43#72#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Services/Projects/ProjectService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="102" column="24" lean-forward="true" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Services/CustomService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Services/StatusMessages/StatusMessageService.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/projects/projectExport.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/Translations/TranslationFeatureTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="90" column="66" lean-forward="true" selection-start-line="90" selection-start-column="66" selection-end-line="90" selection-end-column="66" />
+            <state relative-caret-position="493">
+              <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+              <folding>
+                <element signature="e#49#91#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Services/Projects/ProjectExportService.php">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/FeatureTestCase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="133" column="86" selection-start-line="133" selection-start-column="86" selection-end-line="133" selection-end-column="86" />
+            <state>
+              <caret column="5" selection-start-column="5" selection-end-column="5" />
               <folding>
-                <element signature="e#43#79#0#PHP" expanded="true" />
+                <element signature="e#35#63#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/TranslationController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1088">
+              <caret line="84" column="61" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -182,6 +447,11 @@
       <find>lang</find>
       <find>project</find>
       <find>translationCon</find>
+      <find>language</find>
+      <find>to</find>
+      <find>$this-&gt;route</find>
+      <find>redire</find>
+      <find>original</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,61 +460,61 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Entities/Translations/Translation.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_07_11_125244_create_ref_projects_groups_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/GroupController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AjaxController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/translations/translationShow.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/translations/translationCreate.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
-        <option value="$PROJECT_DIR$/tests/Unit/Requests/Languages/LanguageStoreTest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageStoreRequest.php" />
-        <option value="$PROJECT_DIR$/tests/Unit/Services/Language.php" />
-        <option value="$PROJECT_DIR$/tests/Unit/Services/LanguageTest.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/ExampleTest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/API/APIController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Resources/Translations/TranslationResource.php" />
-        <option value="$PROJECT_DIR$/app/Http/Resources/CustomResourceCollection.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationSearchRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageSearchRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectSearchRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Groups/GroupStoreRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Groups/GroupUpdateRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/status.blade.php" />
-        <option value="$PROJECT_DIR$/app/Services/Translations/TranslationService.php" />
-        <option value="$PROJECT_DIR$/app/Services/Groups/GroupService.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/groups/groupShow.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/admin/addTranslations.js" />
-        <option value="$PROJECT_DIR$/app/Http/Resources/Groups/GroupResource.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/API/AjaxController.php" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Groups/GroupSearchRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/groups/groupEdit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/groups/groupCreate.blade.php" />
-        <option value="$PROJECT_DIR$/public/js/admin/addGroups.js" />
-        <option value="$PROJECT_DIR$/resources/views/admin/projects/projectCreate.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectStoreRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectUpdateRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/projects/projectEdit.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/projects/projectIndex.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/projects/projectShow.blade.php" />
-        <option value="$PROJECT_DIR$/app/Entities/Groups/Group.php" />
-        <option value="$PROJECT_DIR$/docker/php-fpm.docker" />
-        <option value="$PROJECT_DIR$/docker/nginx/default.conf" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/app/Entities/Projects/Project.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/projects/projectExport.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectExportRequest.php" />
-        <option value="$PROJECT_DIR$/app/Services/Projects/ProjectService.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/Services/Projects/ProjectExportService.php" />
         <option value="$USER_HOME$/AppData/Local/Temp/Rar$DIa1972.37184/group.php" />
+        <option value="$USER_HOME$/AppData/Local/Temp/Rar$DIa2792.8596/group.php" />
+        <option value="$PROJECT_DIR$/app/Services/Projects/ProjectExportService.php" />
+        <option value="$PROJECT_DIR$/app/Services/Users/UserService.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/userIndex.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Users/UserSearchRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/userCreate.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/userEdit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Users/UserStoreRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Users/UserUpdateRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/userShow.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageSearchRequest.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/Requests/Languages/LanguageSearchRequest.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/Requests/Languages/LanguageStoreTest.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/Requests/Languages/LanguageSearchTest.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/Requests/Languages/LanguageUpdateTest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Groups/GroupSearchRequest.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/Requests/Groups/GroupSearchRequest.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/Requests/Groups/GroupSearchTest.php" />
+        <option value="$PROJECT_DIR$/database/factories/TranslationFactory.php" />
+        <option value="$PROJECT_DIR$/database/factories/TranslationEntryFactory.php" />
+        <option value="$PROJECT_DIR$/database/factories/LanguageFactory.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/Requests/RequestTestCase.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Groups/GroupStoreRequest.php" />
+        <option value="$PROJECT_DIR$/tests/Unit/Requests/Groups/GroupStoreTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ExampleTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/Translations/TranslationControllerTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/ControllerTestCase.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_06_11_124814_create_groups_table.php" />
+        <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/docker/databases.sql" />
+        <option value="$PROJECT_DIR$/docker/mysql_init/databases.sql" />
+        <option value="$PROJECT_DIR$/docker/mysql.docker" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/config/database.php" />
+        <option value="$PROJECT_DIR$/phpunit.xml" />
+        <option value="$PROJECT_DIR$/app/Services/Projects/ProjectService.php" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php" />
+        <option value="$PROJECT_DIR$/app/Services/Translations/TranslationService.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/FeatureTestCase.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/Translations/TranslationFeatureTest.php" />
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
@@ -339,56 +609,22 @@
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
       <path value="$PROJECT_DIR$/vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="69" />
     <option name="y" value="-8" />
-    <option name="width" value="1859" />
-    <option name="height" value="1096" />
+    <option name="width" value="935" />
+    <option name="height" value="547" />
   </component>
   <component name="ProjectView">
     <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Requests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Requests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Projects" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -465,6 +701,54 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="database" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="database" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="factories" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="admin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="D:\Projects\localization_generator" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="admin" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="translations" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -485,19 +769,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projects\localization_generator\app\Http\Requests\Projects" />
-      <recent name="D:\Projects\localization_generator\app\Http\Resources\Translations" />
-      <recent name="D:\Projects\localization_generator\app\Http\Controllers\API" />
-      <recent name="D:\Projects\localization_generator\app\Http\Requests\Groups" />
-      <recent name="D:\Projects\localization_generator\app\Services\Groups" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\localization_generator\resources\views\admin\users" />
       <recent name="D:\Projects\localization_generator\resources\views\admin\groups" />
       <recent name="D:\Projects\localization_generator\resources\views\admin" />
       <recent name="D:\Projects\localization_generator\resources\views\admin\languages" />
       <recent name="D:\xampp\htdocs\localization_generator\resources\views\admin" />
-      <recent name="D:\xampp\htdocs\localization_generator\resources\sass" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\localization_generator\docker\mysql_init" />
+      <recent name="D:\Projects\localization_generator\app\Http\Requests\Users" />
+      <recent name="D:\Projects\localization_generator\app\Http\Requests\Projects" />
+      <recent name="D:\Projects\localization_generator\app\Http\Resources\Translations" />
+      <recent name="D:\Projects\localization_generator\app\Http\Controllers\API" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -512,11 +796,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.dev" />
+      <item itemvalue="PHPUnit.phpunit.xml" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -544,21 +847,28 @@
       <workItem from="1563350012507" duration="19036000" />
       <workItem from="1563386067633" duration="375000" />
       <workItem from="1563387090876" duration="10000" />
-      <workItem from="1563437515208" duration="17066000" />
+      <workItem from="1563437515208" duration="17264000" />
+      <workItem from="1563526053765" duration="19151000" />
+      <workItem from="1563600239344" duration="10836000" />
+      <workItem from="1563614693173" duration="2500000" />
+      <workItem from="1563617341601" duration="9887000" />
+      <workItem from="1563785122067" duration="4017000" />
+      <workItem from="1563791049499" duration="1371000" />
+      <workItem from="1563793803192" duration="6417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91638000" />
+    <option name="totallyTimeSpent" value="146015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="-8" width="1859" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18010005" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985207" visible="true" weight="0.19455253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="npm" order="2" sideWeight="0.50147927" side_tool="true" weight="0.18176764" />
+      <window_info id="Favorites" order="3" sideWeight="0.50147927" side_tool="true" weight="0.18176764" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32996973" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -568,10 +878,10 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.32996973" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50027794" side_tool="true" weight="0.32996973" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49972206" weight="0.298027" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32996973" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" weight="0.32996973" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50305724" side_tool="true" weight="0.3281412" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49694276" visible="true" weight="0.3281412" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.32917964" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="13" weight="0.32996973" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -579,250 +889,25 @@
       <window_info anchor="right" id="Remote Host" order="3" weight="0.31406337" />
       <window_info anchor="right" id="Database" order="4" visible="true" weight="0.24068928" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17509727" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Command Line Tools Console" order="0" weight="0.32996973" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32996973" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32996973" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50027794" side_tool="true" weight="0.32996973" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49972206" visible="true" weight="0.3319879" />
-      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32996973" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.32962757" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.24068928" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Groups/GroupUpdateRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Groups/GroupStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Translations/TranslationEntryService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/status.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="46" lean-forward="true" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Translations/TranslationService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="796">
-          <caret line="107" column="95" selection-start-line="107" selection-start-column="95" selection-end-line="107" selection-end-column="95" />
-          <folding>
-            <element signature="e#47#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/groups/groupShow.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="62" column="41" selection-start-line="62" selection-start-column="41" selection-end-line="62" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/admin/addTranslations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="6" lean-forward="true" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Resources/Translations/TranslationResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Resources/Groups/GroupResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Groups/GroupSearchRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/groups/groupCreate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="34" column="68" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/groups/groupEdit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="41" column="58" lean-forward="true" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/projects/projectCreate.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Projects/ProjectUpdateRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Projects/ProjectStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="29" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="95" selection-start-line="25" selection-start-column="95" selection-end-line="25" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Groups/GroupService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="98" column="12" selection-start-line="98" selection-start-column="12" selection-end-line="99" selection-end-column="104" />
-          <folding>
-            <element signature="e#41#71#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/admin/addGroups.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/AjaxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#46#94#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://5937306e-711d-4cdd-8ba7-2d34bc7591ec/schema/localization_generator/table/groups">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="c02ba445-35c4-4ce2-b097-05d6ee2a4c8c">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://5937306e-711d-4cdd-8ba7-2d34bc7591ec/schema/localization_generator/table/languages">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="c02ba445-35c4-4ce2-b097-05d6ee2a4c8c">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Entities/Groups/Group.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Entities/Languages/Language.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Entities/Languages/LanguageRM.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0e595ff5-5a91-457a-8e82-e98d0d1d4108/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-545" />
-      </provider>
+    <entry file="das://0e595ff5-5a91-457a-8e82-e98d0d1d4108/schema/localization_generator/table/users" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9e789e8d-695f-4111-adf1-ed3418f9cd73/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker/nginx/default.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker/nginx.docker">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d12809e4-b598-4bd3-b848-b875cc8cc42a/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/docker/node.docker">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/59998990-4e34-49d8-a393-ed45c45c6a9e/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/docker/php-cli.docker">
@@ -830,145 +915,278 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker/php-fpm.docker">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="238">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Collection.php">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7df4fe22-53d6-4478-b2d6-59dd9bcefa97/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="1975" column="20" selection-start-line="1975" selection-start-column="20" selection-end-line="1975" selection-end-column="20" />
+        <state relative-caret-position="357">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/json/json.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="79" column="28" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="28" />
+        <state relative-caret-position="289">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="das://5937306e-711d-4cdd-8ba7-2d34bc7591ec/schema/localization_generator/table/translations_entries">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_06_11_124814_create_groups_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Entities/Users/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="640" column="13" selection-start-line="640" selection-start-column="13" selection-end-line="640" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://7df4fe22-53d6-4478-b2d6-59dd9bcefa97/schema/locale_gen/table/users" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ca7776ae-cd83-4a7a-acfe-b58582a31da0/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://ca7776ae-cd83-4a7a-acfe-b58582a31da0/schema/locale_gen_test/table/users" />
+    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding>
+            <element signature="e#67#95#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/nginx.docker">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/06d29b66-eb5d-4903-967d-5642ecee3a6b/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5d165736-52bb-4b6b-b10b-1b9cafe22bb0/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5147ddff-0fe5-4d3b-8b93-cd43720f8c06/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/46a2640b-3a94-4a54-80c8-653f98b9967a/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c868596c-a828-454d-a0d9-16fcbb1ba98f/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/60d5d944-8086-479c-b63c-309f3bd3a790/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0f1140ea-0d59-4d78-bb43-60d08164d1a8/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/mysql.docker">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/mysql_init/databases.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpunit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="30" column="53" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Projects/ProjectExportService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Projects/ProjectService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="109" column="71" selection-start-line="109" selection-start-column="71" selection-end-line="109" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/RedirectResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#35#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Routing/Redirector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="202" column="27" selection-start-line="202" selection-start-column="27" selection-end-line="202" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="653" column="26" selection-start-line="653" selection-start-column="26" selection-end-line="653" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="50" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+          <folding>
+            <element signature="e#48#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://0f1140ea-0d59-4d78-bb43-60d08164d1a8/schema/locale_gen/table/translations_entries">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="c02ba445-35c4-4ce2-b097-05d6ee2a4c8c">
+        <state projectRestartId="bf0de01d-054f-446e-926e-096bce29489d">
           <filtering>
             <filter text="" />
           </filtering>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/projects/projectEdit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
+    <entry file="das://0f1140ea-0d59-4d78-bb43-60d08164d1a8/schema/locale_gen/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="bf0de01d-054f-446e-926e-096bce29489d">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/projects/projectIndex.blade.php">
+    <entry file="file://$PROJECT_DIR$/database/factories/TranslationFactory.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Translations/TranslationService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="74" column="75" selection-start-line="74" selection-start-column="75" selection-end-line="74" selection-end-column="75" />
+        <state relative-caret-position="-646">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+    <entry file="das://0f1140ea-0d59-4d78-bb43-60d08164d1a8/schema/locale_gen/table/translations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="bf0de01d-054f-446e-926e-096bce29489d">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Entities/Projects/Project.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/TranslationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#43#72#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="1088">
+          <caret line="84" column="61" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/projects/projectShow.blade.php">
+    <entry file="file://$PROJECT_DIR$/vendor/phpunit/phpunit/src/Framework/Assert.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        <state relative-caret-position="207">
+          <caret line="489" column="27" selection-start-line="489" selection-start-column="27" selection-end-line="489" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Projects/ProjectExportRequest.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/ResponseTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding>
-            <element signature="e#46#93#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="293">
+          <caret line="139" column="5" lean-forward="true" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Testing/TestResponse.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="189">
+          <caret line="796" column="58" lean-forward="true" selection-start-line="796" selection-start-column="52" selection-end-line="796" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa15632.31102/group.php">
+    <entry file="file://$PROJECT_DIR$/tests/Feature/FeatureTestCase.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa1972.37184/group.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Projects/ProjectExportService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="133" column="86" selection-start-line="133" selection-start-column="86" selection-end-line="133" selection-end-column="86" />
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
           <folding>
-            <element signature="e#43#79#0#PHP" expanded="true" />
+            <element signature="e#35#63#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/projects/projectExport.blade.php">
+    <entry file="file://$PROJECT_DIR$/tests/Feature/Translations/TranslationFeatureTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/CustomService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/StatusMessages/StatusMessageService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Services/Projects/ProjectService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="102" column="24" lean-forward="true" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="90" column="66" lean-forward="true" selection-start-line="90" selection-start-column="66" selection-end-line="90" selection-end-column="66" />
+        <state relative-caret-position="493">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding>
+            <element signature="e#49#91#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
