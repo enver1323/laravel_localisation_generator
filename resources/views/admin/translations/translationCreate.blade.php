@@ -31,13 +31,13 @@
                         <label for="transLangs">Choose language to add entry</label>
                     </div>
                     <div class="col-md-9 col-lg-10">
-                        <select id="transLangs" class="form-control col-md-6 col-lg-4 d-inline-block">
+                        <select id="transLangs" class="form-control col-md-8 col-lg-4 d-inline-block">
                             @foreach($langs as $lang)
                                 <option value="{{$lang->code}}" {{$loop->first ? 'selected' : ''}}>{{$lang->name}}</option>
                             @endforeach
                         </select>
-                        <div class="col-md-1 d-inline-block"></div>
-                        <button type="button" class="btn btn-primary col-md-1 d-inline-block" onclick="addEntry()">
+                        <div class="col-lg-1 d-inline-block"></div>
+                        <button type="button" class="btn btn-primary col-md-8 col-lg-1 d-inline-block" onclick="addEntry()">
                             Add entry
                         </button>
                     </div>

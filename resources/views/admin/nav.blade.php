@@ -1,6 +1,6 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-    <!-- Sidebar - Brand -->
+@php $route = request()->route()->getName()@endphp
+<!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('index')}}">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
@@ -12,7 +12,7 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
+    <li class="nav-item {{(strpos($route, 'admin.index') !== false) ? 'active' : ''}}">
         <a class="nav-link" href="{{route('admin.index')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
@@ -27,7 +27,7 @@
     </div>
 
     <!-- Nav Item - Projects -->
-    <li class="nav-item">
+    <li class="nav-item {{(strpos($route, 'admin.projects') !== false) ? 'active' : ''}}">
         <a class="nav-link" href="{{route('admin.projects.index')}}">
             <i class="fas fa-fw fa-user"></i>
             <span>Projects</span></a>
@@ -42,21 +42,21 @@
     </div>
 
     <!-- Nav Item - Categories -->
-    <li class="nav-item">
+    <li class="nav-item {{(strpos($route, 'admin.translations') !== false) ? 'active' : ''}}">
         <a class="nav-link" href="{{route('admin.translations.index')}}">
             <i class="fas fa-fw fa-table"></i>
             <span>Translations</span></a>
     </li>
 
     <!-- Nav Item - Products -->
-    <li class="nav-item">
+    <li class="nav-item {{(strpos($route, 'admin.languages') !== false) ? 'active' : ''}}">
         <a class="nav-link" href="{{route('admin.languages.index')}}">
             <i class="fas fa-fw fa-tshirt"></i>
             <span>Languages</span></a>
     </li>
 
     <!-- Nav Item - Orders -->
-    <li class="nav-item">
+    <li class="nav-item {{(strpos($route, 'admin.groups') !== false) ? 'active' : ''}}">
         <a class="nav-link" href="{{route('admin.groups.index')}}">
             <i class="fas fa-money-bill"></i>
             <span>Groups</span></a>
@@ -71,7 +71,7 @@
     </div>
 
     <!-- Nav Item - Users -->
-    <li class="nav-item">
+    <li class="nav-item {{(strpos($route, 'admin.users') !== false) ? 'active' : ''}}">
         <a class="nav-link" href="{{route('admin.users.index')}}">
             <i class="fas fa-fw fa-user"></i>
             <span>Users</span></a>

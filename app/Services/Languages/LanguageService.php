@@ -36,20 +36,25 @@ class LanguageService extends CustomService
 
     private function formSearch(LanguageSearchRequest $request, LanguageRM $query, $object): array
     {
+        $found = false;
+
         if ($request->input('code')) {
             $object->id = $request->input('code');
             $query = $query->where('code', '=', $request->input('code'));
+            $found = 1;
         }
 
         if ($request->input('name')) {
             $object->name = $request->input('name');
             $query = $query->where('name', 'LIKE', "%$object->name%");
+            $found = 1;
         }
 
-        if (!$query->count()) {
+        if (!$found) {
             $query = $this->model;
             $this->fireStatusMessage(StatusMessage::TYPES['warning'], 'Nothing was found according to your query');
-        }
+        }else
+            $this->fireStatusMessage(StatusMessage::TYPES['success'], sprintf('%d results were found', $query->count()));
 
         return [$query, $object];
     }
