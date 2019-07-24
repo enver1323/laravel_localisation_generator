@@ -30,18 +30,18 @@ class TranslationRM extends Translation implements CustomReadModel
         return $this->key;
     }
 
-    public function getById($id)
+    public function getById($id): self
     {
-        return $this->findOrFail($id);
+        return parent::findOrFail($id);
     }
 
     public function getAll()
     {
-        return $this->all();
+        return parent::all();
     }
 
     public function getPaginated(int $itemsPerPage)
     {
-        return $this->paginate($itemsPerPage);
+        return parent::paginate($itemsPerPage);
     }
 }

@@ -22,8 +22,15 @@ Route::group([
     'prefix' => 'admin',
     'namespace' => 'Admin',
     'middleware' => 'auth',
-], function (){
+], function () {
     Route::get('/', 'IndexController@index')->name('index');
+
+    Route::group([
+        'prefix' => 'groups',
+        'as' => 'groups.'
+    ], function () {
+        Route::post('translations', 'GroupController@attachTranslations')->name('attachTranslations');
+    });
 
     Route::resources([
         'translations' => 'TranslationController',
@@ -36,24 +43,15 @@ Route::group([
     Route::group([
         'prefix' => 'projects',
         'as' => 'projects.'
-    ], function (){
+    ], function () {
         Route::group([
             'prefix' => 'export/{project}',
             'as' => 'export.'
-        ],function(){
+        ], function () {
             Route::get('/', 'ProjectController@setUpExport')->name('show');
             Route::post('/', 'ProjectController@export')->name('file');
         });
     });
-});
-
-Route::group([
-    'prefix' => 'ajax',
-    'as' => 'ajax.',
-    'namespace' => 'API'
-], function () {
-    Route::get('translations', 'AjaxController@getTranslations')->middleware('throttle:60,1')->name('translations');
-    Route::get('groups', 'AjaxController@getGroups')->middleware('throttle:60,1')->name('groups');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

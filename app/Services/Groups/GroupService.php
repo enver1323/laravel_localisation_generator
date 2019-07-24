@@ -7,6 +7,7 @@ namespace App\Services\Groups;
 use App\Entities\Groups\Group;
 use App\Entities\Groups\GroupRM;
 use App\Entities\StatusMessage;
+use App\Http\Requests\Groups\GroupAddTranslationsRequest;
 use App\Http\Requests\Groups\GroupSearchRequest;
 use App\Http\Requests\Groups\GroupStoreRequest;
 use App\Http\Requests\Groups\GroupUpdateRequest;
@@ -98,5 +99,13 @@ class GroupService extends CustomService
             $message = $exception->getMessage();
             $this->fireStatusMessage(StatusMessage::TYPES['danger'], $message);
         }
+    }
+
+    public function attachTranslations(GroupAddTranslationsRequest $request): void
+    {
+        $this->model->getById($request->input('group'))->translations()
+            ->syncWithoutDetaching($request->input('translations'));
+
+        $this->fireStatusMessage(StatusMessage::TYPES['success'], "Translations were successfully attached");
     }
 }

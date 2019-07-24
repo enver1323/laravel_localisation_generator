@@ -10,7 +10,7 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Translations Filter:</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Filter:</h6>
         </div>
         <div class="card-body">
             <form action="{{route('admin.translations.index')}}" method="GET">
@@ -59,6 +59,39 @@
     </div>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Manage Groups:</h6>
+        </div>
+        <div class="card-body">
+            <form action="{{route('admin.groups.attachTranslations')}}" method="POST" id="groupForm">
+                @csrf
+                <div class="row mb-4 d-flex align-items-center">
+                    <div class="d-inline-block ml-3 mr-4">
+                        <label for="transGroup">
+                            Add Translations to group
+                        </label>
+                    </div>
+                    <div class="d-inline-block mr-4">
+                        <select name="group" id="transGroup" class="form-control">
+                            <option value="">Choose a group to add to</option>
+                            @foreach($groups as $group)
+                                <option value="{{$group->id}}">{{$group->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="d-inline-block mr-4">
+                        <input id="selectAllTransBottom" type="checkbox" onclick="selectAll(this.checked)">
+                        <label for="selectAllTransBottom">Select All</label>
+                    </div>
+                    <button class="btn btn-primary d-inline-block" type="button" onclick="submitForm()">
+                        Add
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Translations:</h6>
         </div>
         <div class="card-body">
@@ -69,32 +102,44 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
+                        <th></th>
                         <th>ID</th>
                         <th>Key</th>
                         <th>Languages</th>
+                        <th>Groups</th>
                         <th>Options</th>
                     </tr>
                     </thead>
                     <tfoot>
                     <tr>
+                        <th></th>
                         <th>ID</th>
                         <th>Key</th>
                         <th>Languages</th>
+                        <th>Groups</th>
                         <th>Options</th>
                     </tr>
                     </tfoot>
                     <tbody>
                     @foreach($items as $item)
                         <tr>
-                            <td>{{$item->id}}</td>
+                            <td width="1px">
+                                <input type="checkbox" value="{{$item->id}}" class="translationIds">
+                            </td>
+                            <td width="1px">{{$item->id}}</td>
                             <td>
                                 <a href="{{route('admin.translations.show', $item)}}">{{$item->key}}</a>
                             </td>
                             <td>
                                 @foreach($item->languages as $lang)
-                                    <a href="{{route('admin.languages.show', $lang)}}">
-                                        {{$lang->name . ($loop->last ? '' : ', ' )}}
-                                    </a>
+                                    <a href="{{route('admin.languages.show', $lang)}}">{{$lang->name}}</a>
+                                    {{($loop->last ? '' : ', ' )}}
+                                @endforeach
+                            </td>
+                            <td>
+                                @foreach($item->groups as $group)
+                                    <a href="{{route('admin.groups.show', $group)}}">{{$group->name}}</a>
+                                    {{$loop->last ? '' : ', ' }}
                                 @endforeach
                             </td>
                             <td>
@@ -118,8 +163,41 @@
                 </table>
             </div>
         </div>
+
         <div class="d-flex justify-content-center">
             {{$items->links()}}
         </div>
     </div>
+@endsection
+@section('scripts')
+    <script type="text/javascript">
+        var form = document.forms['groupForm'];
+        var translations = document.getElementsByClassName('translationIds');
+
+        function selectAll(state) {
+            for (var key in translations)
+                translations[key].checked = state;
+        }
+
+        function submitForm() {
+            for (var key in translations){
+                if(translations[key].checked && createInput(translations[key].value) !== undefined)
+                    form.appendChild(createInput(translations[key].value));
+            }
+
+            form.submit();
+        }
+
+        function createInput(data) {
+            if(data === undefined)
+                return;
+
+            var input = document.createElement('input');
+            input.setAttribute('name', 'translations[]');
+            input.setAttribute('value', data);
+            input.setAttribute('hidden', '');
+
+            return input;
+        }
+    </script>
 @endsection

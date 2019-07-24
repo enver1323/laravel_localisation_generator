@@ -4,6 +4,7 @@
 namespace App\Services\Translations;
 
 
+
 use App\Entities\StatusMessage;
 use App\Entities\Translations\Translation;
 use App\Entities\Translations\TranslationRM;
@@ -114,7 +115,7 @@ class TranslationService extends CustomService
         }
     }
 
-    protected function syncGroups(?array $groups, Translation $translation): void
+    private function syncGroups(?array $groups, Translation $translation): void
     {
         try {
             if (isset($groups) && !empty($groups))

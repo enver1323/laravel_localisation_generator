@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Entities\Groups\GroupRM;
 use App\Entities\Projects\ProjectRM;
+use App\Http\Requests\Groups\GroupAddTranslationsRequest;
 use App\Http\Requests\Groups\GroupSearchRequest;
 use App\Http\Requests\Groups\GroupStoreRequest;
 use App\Http\Requests\Groups\GroupUpdateRequest;
@@ -80,5 +81,12 @@ class GroupController extends AdminController
         $this->service->destroy($group);
 
         return redirect()->route('admin.groups.index');
+    }
+
+    public function attachTranslations(GroupAddTranslationsRequest $request)
+    {
+        $this->service->attachTranslations($request);
+
+        return redirect()->back();
     }
 }

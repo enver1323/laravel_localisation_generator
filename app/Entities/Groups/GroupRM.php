@@ -9,9 +9,9 @@ use App\Entities\CustomReadModel;
 class GroupRM extends Group implements CustomReadModel
 {
 
-    public function getById($id)
+    public function getById($id): self
     {
-        return $this->find($id);
+        return parent::find($id);
     }
 
     public function getAll()
