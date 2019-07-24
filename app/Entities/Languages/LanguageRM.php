@@ -18,7 +18,7 @@ class LanguageRM extends Language implements CustomReadModel
 
     public function getAll()
     {
-        return $this->all();
+        return parent::all();
     }
 
     public function getPaginated(int $itemsPerPage)

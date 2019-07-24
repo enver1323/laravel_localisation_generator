@@ -106,15 +106,4 @@ class ProjectService extends CustomService
 
         return $path;
     }
-
-    private function saveGroups(?array $groups, Project $project): void
-    {
-        try{
-            if(isset($groups) && !empty($groups))
-            $project->groups()->sync($groups);
-        }catch (Exception $exception){
-            $message = $exception->getMessage();
-            $this->fireStatusMessage(StatusMessage::TYPES['danger'], "Groups error:\"$message\"");
-        }
-    }
 }

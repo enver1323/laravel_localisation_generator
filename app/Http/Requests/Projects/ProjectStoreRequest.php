@@ -26,8 +26,6 @@ class ProjectStoreRequest extends FormRequest
         return [
             'name' => 'required|string|max:255|unique:projects,name',
             'description' => 'required|string',
-            'groups' => 'nullable|array',
-            'groups.*' => 'nullable|numeric|exists:groups,id'
         ];
     }
 }

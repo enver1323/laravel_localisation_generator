@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Admin;
 
 
 
+use App\Entities\Groups\GroupRM;
 use App\Entities\Languages\LanguageRM;
 use App\Entities\Translations\Translation;
 use App\Entities\Translations\TranslationRM;
@@ -17,14 +18,16 @@ use App\Services\Translations\TranslationService;
 class TranslationController extends AdminController
 {
     private $languages;
+    private $groups;
 
     private function getView(string $view): string
     {
         return sprintf('translations.%s', $view);
     }
 
-    public function __construct(LanguageRM $languages, TranslationService $service)
+    public function __construct(LanguageRM $languages, TranslationService $service, GroupRM $groups)
     {
+        $this->groups = $groups;
         $this->service = $service;
         $this->languages = $languages;
     }
@@ -36,6 +39,7 @@ class TranslationController extends AdminController
         return $this->render($this->getView('translationIndex'), [
             'items' => $items,
             'langs' => $this->languages->getAll(),
+            'groups' => $this->groups->getAll(),
             'searchQuery' => $queryObject
         ]);
     }
@@ -44,6 +48,7 @@ class TranslationController extends AdminController
     {
         return $this->render($this->getView('translationCreate'), [
             'langs' => $this->languages->getAll(),
+            'groups' => $this->groups->getAll()
         ]);
     }
 
@@ -65,7 +70,8 @@ class TranslationController extends AdminController
     {
         return $this->render($this->getView('translationEdit'), [
             'item' => $translation,
-            'langs' => $this->languages->getAll()
+            'langs' => $this->languages->getAll(),
+            'groups' => $this->groups->getAll()
         ]);
     }
 

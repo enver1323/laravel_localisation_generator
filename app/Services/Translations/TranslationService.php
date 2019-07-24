@@ -40,36 +40,32 @@ class TranslationService extends CustomService
 
     private function formSearch(TranslationSearchRequest $request, TranslationRM $query, $object): array
     {
-        $found = false;
-
         if ($request->input('id')) {
             $object->id = $request->input('id');
             $query = $query->where('id', '=', $request->input('id'));
-            $found = true;
         }
 
         if ($request->input('key')) {
             $object->key = $request->input('key');
             $query = $query->where('key', 'LIKE', "%$object->key%");
-            $found = true;
         }
 
-        if ($request->input('language_ids') && !empty($request->input('language_ids'))) {
-            $object->languages = $request->input('language_ids');
+        if ($request->input('languages') && !empty($request->input('languages'))) {
+            $object->languages = $request->input('languages');
 
             foreach ($object->languages as $language)
                 $query = $query->whereHas('languages', function (Builder $query) use ($language) {
                     $query->where('code', '=', $language);
                 });
-
-            $found = true;
         }
 
-        if (!$found) {
-            $query = $this->model;
-            $this->fireStatusMessage(StatusMessage::TYPES['warning'], 'Nothing was found according to your query');
-        }else
-            $this->fireStatusMessage(StatusMessage::TYPES['success'], sprintf('%d results were found', $query->count()));
+        if ($request->input('groups') && !empty($request->input('groups'))) {
+            $object->groups = $request->input('groups');
+            foreach ($object->groups as $group)
+                $query = $query->whereHas('groups', function (Builder $query) use ($group) {
+                    $query->where('id', '=', $group);
+                });
+        }
 
         return [$query, $object];
     }
@@ -81,6 +77,7 @@ class TranslationService extends CustomService
         ]);
 
         $this->saveEntries($request->input('entries'), $item);
+        $this->syncGroups($request->input('groups'), $item);
 
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Translation \"$item->key\" was successfully created");
         return;
@@ -92,6 +89,7 @@ class TranslationService extends CustomService
         $item->save();
 
         $this->saveEntries($request->input('entries'), $item);
+        $this->syncGroups($request->input('groups'), $item);
 
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Translation \"$item->key\" was successfully modified");
         return;
@@ -110,6 +108,17 @@ class TranslationService extends CustomService
         try {
             if (isset($entries) && !empty($entries))
                 $this->entryService->saveFromTranslation($entries, $translation);
+        } catch (Exception $exception) {
+            $message = $exception->getMessage();
+            $this->fireStatusMessage(StatusMessage::TYPES['danger'], "Translation entries error:\"$message\"");
+        }
+    }
+
+    protected function syncGroups(?array $groups, Translation $translation): void
+    {
+        try {
+            if (isset($groups) && !empty($groups))
+                $translation->groups()->sync($groups);
         } catch (Exception $exception) {
             $message = $exception->getMessage();
             $this->fireStatusMessage(StatusMessage::TYPES['danger'], "Translation entries error:\"$message\"");

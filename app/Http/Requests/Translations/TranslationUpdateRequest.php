@@ -26,6 +26,8 @@ class TranslationUpdateRequest extends FormRequest
         return [
             'key' => 'required|string|min:3|max:255',
             'entries' => 'nullable|array',
+            'groups' => 'nullable|array',
+            'groups.*' => 'nullable|numeric|exists:groups,id',
         ];
     }
 }

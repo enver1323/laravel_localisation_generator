@@ -26,8 +26,6 @@ class ProjectUpdateRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'groups' => 'nullable|array',
-            'groups.*' => 'nullable|numeric|exists:groups,id'
         ];
     }
 }

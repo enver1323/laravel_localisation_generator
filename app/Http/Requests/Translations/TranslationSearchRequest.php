@@ -26,7 +26,10 @@ class TranslationSearchRequest extends FormRequest
         return [
             'id' => 'nullable|numeric',
             'key' => 'nullable|string',
-            'languages' => 'nullable|array'
+            'languages' => 'nullable|array',
+            'languages.*' => 'nullable|string|max:2|exists:languages,code',
+            'groups' => 'nullable|array',
+            'groups.*' => 'nullable|numeric|exists:groups,id'
         ];
     }
 }

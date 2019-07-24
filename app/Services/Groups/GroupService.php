@@ -62,7 +62,7 @@ class GroupService extends CustomService
             'description' => $request->input('description')
         ]);
 
-        $this->saveTranslations($request->input('translations'), $item);
+        $this->syncProjects($request->input('projects'), $item);
 
         if ($request->input('translations') != null && !empty($request->input('translations')))
 
@@ -76,7 +76,7 @@ class GroupService extends CustomService
         $item->description = $request->input('description');
         $item->save();
 
-        $this->saveTranslations($request->input('translations'), $item);
+        $this->syncProjects($request->input('projects'), $item);
 
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Group \"$item->name\" was successfully modified");
         return;
@@ -90,14 +90,13 @@ class GroupService extends CustomService
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Group \"$name\" was successfully deleted");
     }
 
-    private function saveTranslations(?array $translations, Group $group)
+    private function syncProjects(?array $projects, Group $item)
     {
-        try {
-            if (isset($translations) && !empty($translations))
-                $group->translations()->sync($translations);
-        } catch (Exception $exception) {
+        try{
+            $item->projects()->sync($projects);
+        }catch (Exception $exception){
             $message = $exception->getMessage();
-            $this->fireStatusMessage(StatusMessage::TYPES['danger'], "Translations error:\"$message\"");
+            $this->fireStatusMessage(StatusMessage::TYPES['danger'], $message);
         }
     }
 }

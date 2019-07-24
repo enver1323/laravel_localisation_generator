@@ -16,7 +16,7 @@ class GroupRM extends Group implements CustomReadModel
 
     public function getAll()
     {
-        return $this->all();
+        return parent::all();
     }
 
     public function getPaginated(int $itemsPerPage)

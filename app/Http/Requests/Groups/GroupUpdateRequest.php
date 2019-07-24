@@ -26,8 +26,8 @@ class GroupUpdateRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'translations' => 'nullable|array',
-            'translations.*' => 'nullable|numeric|exists:translations,id'
+            'projects' => 'nullable|array',
+            'projects.*' => 'nullable|numeric|exists:projects,id'
         ];
     }
 }

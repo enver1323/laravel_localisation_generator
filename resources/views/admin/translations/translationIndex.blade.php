@@ -27,11 +27,22 @@
                     </div>
                     <div class="col form-group">
                         <label for="searchLangs">Languages</label>
-                        <select class="form-control" id="searchLangs" name="language_ids[]" multiple>
+                        <select class="form-control" id="searchLangs" name="languages[]" multiple>
                             @foreach($langs as $lang)
                                 <option
                                     value="{{$lang->code}}" {{isset($searchQuery->languages) && in_array($searchQuery->languages, [$lang->code]) ? 'selected' : ''}}>
                                     {{$lang->name}}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col form-group">
+                        <label for="searchLangs">Groups</label>
+                        <select class="form-control" id="searchGroups" name="groups[]" multiple>
+                            @foreach($groups as $group)
+                                <option
+                                    value="{{$group->id}}" {{isset($searchQuery->$groups) && in_array($searchQuery->$groups, [$group->id]) ? 'selected' : ''}}>
+                                    {{$group->name}}
                                 </option>
                             @endforeach
                         </select>

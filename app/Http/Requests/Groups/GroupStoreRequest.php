@@ -26,8 +26,8 @@ class GroupStoreRequest extends FormRequest
         return [
             'name' => 'required|string|max:255|unique:groups,name',
             'description' => 'required|string',
-            'translations' => 'nullable|array',
-            'translations.*' => 'numeric|exists:translations,id'
+            'projects' => 'nullable|array',
+            'projects.*' => 'nullable|numeric|exists:projects,id'
         ];
     }
 }

@@ -47,4 +47,13 @@ Route::group([
     });
 });
 
+Route::group([
+    'prefix' => 'ajax',
+    'as' => 'ajax.',
+    'namespace' => 'API'
+], function () {
+    Route::get('translations', 'AjaxController@getTranslations')->middleware('throttle:60,1')->name('translations');
+    Route::get('groups', 'AjaxController@getGroups')->middleware('throttle:60,1')->name('groups');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');

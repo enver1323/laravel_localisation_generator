@@ -26,6 +26,8 @@ class TranslationStoreRequest extends FormRequest
         return [
             'key' => 'required|string|max:255|min:3|unique:translations,key',
             'entries' => 'nullable|array',
+            'groups' => 'nullable|array',
+            'groups.*' => 'nullable|numeric|exists:groups,id',
         ];
     }
 }

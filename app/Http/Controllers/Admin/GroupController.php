@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 
 
 use App\Entities\Groups\GroupRM;
+use App\Entities\Projects\ProjectRM;
 use App\Http\Requests\Groups\GroupSearchRequest;
 use App\Http\Requests\Groups\GroupStoreRequest;
 use App\Http\Requests\Groups\GroupUpdateRequest;
@@ -12,14 +13,17 @@ use App\Services\Groups\GroupService;
 
 class GroupController extends AdminController
 {
+    private $projects;
+
     private function getView(string $view): string
     {
         return sprintf('groups.%s', $view);
     }
 
-    public function __construct(GroupService $service)
+    public function __construct(GroupService $service, ProjectRM $projects)
     {
         $this->service = $service;
+        $this->projects = $projects;
     }
 
     public function index(GroupSearchRequest $request)
@@ -28,13 +32,16 @@ class GroupController extends AdminController
 
         return $this->render($this->getView('groupIndex'), [
             'items' => $items,
+            'projects' => $this->projects->getAll(),
             'searchQuery' => $queryObject,
         ]);
     }
 
     public function create()
     {
-        return $this->render($this->getView('groupCreate'));
+        return $this->render($this->getView('groupCreate'), [
+            'projects' => $this->projects->getAll(),
+        ]);
     }
 
     public function store(GroupStoreRequest $request)
@@ -54,7 +61,8 @@ class GroupController extends AdminController
     public function edit(GroupRM $group)
     {
         return $this->render($this->getView('groupEdit'), [
-            'item' => $group
+            'item' => $group,
+            'projects' => $this->projects->getAll(),
         ]);
     }
 

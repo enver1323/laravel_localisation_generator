@@ -12,6 +12,9 @@ function addEntry() {
 }
 
 function isEntryNotCreated(option){
+    if(option === undefined)
+        return false;
+
     var list = document.getElementsByClassName('entryInput');
     for(var i = 0; i < list.length; i++){
         if(list[i].name.split('[')[1] === (option.value + ']')){
@@ -28,7 +31,7 @@ function addEntryField(option){
     setAttributes(row, {'class' : 'row mb-4',});
 
     var col = document.createElement('div');
-    setAttributes(col, {'class' : 'col-md-3 col-lg-2',});
+    setAttributes(col, {'class' : 'col-md-4 col-lg-3',});
     row.appendChild(col);
 
     var label = document.createElement('label');
@@ -37,12 +40,12 @@ function addEntryField(option){
     col.appendChild(label);
 
     col = document.createElement('div');
-    setAttributes(col, {'class' : 'col-md-9 col-lg-10',});
+    setAttributes(col, {'class' : 'col-md-8 col-lg-9',});
     row.appendChild(col);
 
     var input = document.createElement('input');
     setAttributes(input, {
-        'class' : 'form-control col-md-8 col-lg-6 entryInput',
+        'class' : 'form-control entryInput',
         'id' : "transEntry" + option.innerHTML,
         'type' : 'text',
         'name' : 'entries[' + option.value + ']',
