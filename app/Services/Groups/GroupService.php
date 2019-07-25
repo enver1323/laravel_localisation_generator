@@ -7,7 +7,7 @@ namespace App\Services\Groups;
 use App\Entities\Groups\Group;
 use App\Entities\Groups\GroupRM;
 use App\Entities\StatusMessage;
-use App\Http\Requests\Groups\ProjectAddGroupsRequest;
+use App\Http\Requests\Groups\GroupAddTranslationsRequest;
 use App\Http\Requests\Groups\GroupSearchRequest;
 use App\Http\Requests\Groups\GroupStoreRequest;
 use App\Http\Requests\Groups\GroupUpdateRequest;
@@ -105,7 +105,7 @@ class GroupService extends CustomService
         }
     }
 
-    public function attachTranslations(ProjectAddGroupsRequest $request): void
+    public function attachTranslations(GroupAddTranslationsRequest $request): void
     {
         $this->model->getById($request->input('group'))->translations()
             ->syncWithoutDetaching($request->input('translations'));

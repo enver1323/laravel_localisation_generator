@@ -28,7 +28,7 @@ class ProjectExportService extends CustomService
     {
         $list = $this->formCollection($project, $languages);
 
-        $file = sprintf('%s.json', request()->user()->name);
+        $file = sprintf('%s_%s_%d.json', $project->name, request()->user()->name, time());
         $storagePath = $this->getStoragePath($file);
 
         try {
@@ -76,7 +76,7 @@ class ProjectExportService extends CustomService
             }
         }
 
-        return $this->createZipFile($rootFolder);
+        return $this->createZipFile($rootFolder, $project);
     }
 
     protected function formCollection(ProjectRM $project, array $languages = []): Collection
@@ -146,20 +146,20 @@ class ProjectExportService extends CustomService
         File::put($path, $file);
     }
 
-    private function createZipFile(string $rootFolder): string
+    private function createZipFile(string $rootFolder, ProjectRM $project): string
     {
-        $zipFile = $this->getStoragePath("$rootFolder.zip");;
+        $zipFile = $this->getStoragePath(sprintf('%s_%s_%d.zip', $project->name, request()->user()->name, time()));
 
         $zip = new ZipArchive();
         $zip->open($zipFile, ZipArchive::CREATE | ZipArchive::OVERWRITE);
 
-        $path = $this->getStoragePath();
+        $path = $this->getStoragePath($rootFolder);
         $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
 
         foreach ($files as $name => $file) {
             if (!$file->isDir()) {
                 $filePath = $file->getRealPath();
-                $relativePath = substr($filePath, strlen($path));
+                $relativePath = substr($filePath, strlen($path) + 1);
 
                 $zip->addFile($filePath, $relativePath);
             }
