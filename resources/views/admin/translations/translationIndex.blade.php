@@ -37,11 +37,11 @@
                         </select>
                     </div>
                     <div class="col form-group">
-                        <label for="searchLangs">Groups</label>
+                        <label for="searchGroups">Groups</label>
                         <select class="form-control" id="searchGroups" name="groups[]" multiple>
                             @foreach($groups as $group)
                                 <option
-                                    value="{{$group->id}}" {{isset($searchQuery->$groups) && in_array($searchQuery->$groups, [$group->id]) ? 'selected' : ''}}>
+                                    value="{{$group->id}}" {{isset($searchQuery->groups) && in_array($searchQuery->groups, [$group->id]) ? 'selected' : ''}}>
                                     {{$group->name}}
                                 </option>
                             @endforeach
@@ -170,34 +170,5 @@
     </div>
 @endsection
 @section('scripts')
-    <script type="text/javascript">
-        var form = document.forms['groupForm'];
-        var translations = document.getElementsByClassName('translationIds');
-
-        function selectAll(state) {
-            for (var key in translations)
-                translations[key].checked = state;
-        }
-
-        function submitForm() {
-            for (var key in translations){
-                if(translations[key].checked && createInput(translations[key].value) !== undefined)
-                    form.appendChild(createInput(translations[key].value));
-            }
-
-            form.submit();
-        }
-
-        function createInput(data) {
-            if(data === undefined)
-                return;
-
-            var input = document.createElement('input');
-            input.setAttribute('name', 'translations[]');
-            input.setAttribute('value', data);
-            input.setAttribute('hidden', '');
-
-            return input;
-        }
-    </script>
+    <script src="{{asset('js/admin/addTranslationsToGroup.js')}}" type="text/javascript"></script>
 @endsection

@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Requests\Groups;
+
+namespace App\Http\Requests\Projects;
+
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class GroupSearchRequest extends FormRequest
+class ProjectAddGroupsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +15,7 @@ class GroupSearchRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return (bool) $this->user();
     }
 
     /**
@@ -24,10 +26,9 @@ class GroupSearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'nullable|numeric',
-            'name' => 'nullable|string|max:255',
-            'projects' => 'nullable|array',
-            'projects.*' => 'nullable|numeric|exists:projects,id'
+            'project' => 'required|numeric|exists:projects,id',
+            'groups' => 'required|array',
+            'groups.*' => 'required|numeric|exists:groups,id',
         ];
     }
 }

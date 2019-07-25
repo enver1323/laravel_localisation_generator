@@ -32,18 +32,12 @@ Route::group([
         Route::post('translations', 'GroupController@attachTranslations')->name('attachTranslations');
     });
 
-    Route::resources([
-        'translations' => 'TranslationController',
-        'languages' => 'LanguageController',
-        'projects' => 'ProjectController',
-        'groups' => 'GroupController',
-        'users' => 'UserController'
-    ]);
-
     Route::group([
         'prefix' => 'projects',
         'as' => 'projects.'
     ], function () {
+        Route::post('groups', 'ProjectController@attachGroups')->name('attachGroups');
+
         Route::group([
             'prefix' => 'export/{project}',
             'as' => 'export.'
@@ -52,6 +46,14 @@ Route::group([
             Route::post('/', 'ProjectController@export')->name('file');
         });
     });
+
+    Route::resources([
+        'translations' => 'TranslationController',
+        'languages' => 'LanguageController',
+        'projects' => 'ProjectController',
+        'groups' => 'GroupController',
+        'users' => 'UserController'
+    ]);
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

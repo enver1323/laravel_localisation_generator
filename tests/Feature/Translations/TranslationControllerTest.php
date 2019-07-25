@@ -39,12 +39,10 @@ class TranslationControllerTest extends FeatureTestCase
         $item = ($testAll || isset($key)) ? $this->entity : (object)['key' => $key];
 
         $this->call('get', $route, ['id' => $item->id])
-            ->assertViewIs('admin.translations.translationIndex')
-            ->assertSeeText('results were found');
+            ->assertViewIs('admin.translations.translationIndex');
 
         $this->call('get', $route, ['key' => $item->key])
-            ->assertViewIs('admin.translations.translationIndex')
-            ->assertSeeText('results were found');
+            ->assertViewIs('admin.translations.translationIndex');
     }
 
     public function testStore(): void

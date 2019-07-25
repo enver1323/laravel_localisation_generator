@@ -7,12 +7,13 @@ namespace App\Services\Groups;
 use App\Entities\Groups\Group;
 use App\Entities\Groups\GroupRM;
 use App\Entities\StatusMessage;
-use App\Http\Requests\Groups\GroupAddTranslationsRequest;
+use App\Http\Requests\Groups\ProjectAddGroupsRequest;
 use App\Http\Requests\Groups\GroupSearchRequest;
 use App\Http\Requests\Groups\GroupStoreRequest;
 use App\Http\Requests\Groups\GroupUpdateRequest;
 use App\Services\CustomService;
 use Exception;
+use Illuminate\Database\Eloquent\Builder;
 
 class GroupService extends CustomService
 {
@@ -48,9 +49,12 @@ class GroupService extends CustomService
             $query = $query->where('name', 'LIKE', "%$object->name%");
         }
 
-        if (!$query->count()) {
-            $query = $this->model;
-            $this->fireStatusMessage(StatusMessage::TYPES['warning'], 'Nothing was found according to your query');
+        if ($request->input('projects') && !empty($request->input('projects'))) {
+            $object->projects = $request->input('projects');
+            foreach ($object->projects as $project)
+                $query = $query->whereHas('projects', function (Builder $query) use ($project) {
+                    $query->where('id', '=', $project);
+                });
         }
 
         return [$query, $object];
@@ -101,7 +105,7 @@ class GroupService extends CustomService
         }
     }
 
-    public function attachTranslations(GroupAddTranslationsRequest $request): void
+    public function attachTranslations(ProjectAddGroupsRequest $request): void
     {
         $this->model->getById($request->input('group'))->translations()
             ->syncWithoutDetaching($request->input('translations'));

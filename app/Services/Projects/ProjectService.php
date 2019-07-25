@@ -7,13 +7,12 @@ namespace App\Services\Projects;
 use App\Entities\Projects\Project;
 use App\Entities\Projects\ProjectRM;
 use App\Entities\StatusMessage;
+use App\Http\Requests\Projects\ProjectAddGroupsRequest;
 use App\Http\Requests\Projects\ProjectExportRequest;
 use App\Http\Requests\Projects\ProjectSearchRequest;
 use App\Http\Requests\Projects\ProjectStoreRequest;
 use App\Http\Requests\Projects\ProjectUpdateRequest;
 use App\Services\CustomService;
-use App\Services\Groups\GroupService;
-use Exception;
 
 class ProjectService extends CustomService
 {
@@ -66,8 +65,6 @@ class ProjectService extends CustomService
             'description' => $request->input('description')
         ]);
 
-        $this->saveGroups($request->input('groups'), $item);
-
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Project \"$item->name\" was successfully created");
         return;
     }
@@ -77,8 +74,6 @@ class ProjectService extends CustomService
         $item->name = $request->input('name');
         $item->description = $request->input('description');
         $item->save();
-
-        $this->saveGroups($request->input('groups'), $item);
 
         $this->fireStatusMessage(StatusMessage::TYPES['success'], "Project \"$item->name\" was successfully modified");
         return;
@@ -105,5 +100,13 @@ class ProjectService extends CustomService
         $this->fireStatusMessage(StatusMessage::TYPES['success'], 'File was successfully generated');
 
         return $path;
+    }
+
+    public function attachGroups(ProjectAddGroupsRequest $request): void
+    {
+        $this->model->getById($request->input('project'))->groups()
+            ->syncWithoutDetaching($request->input('groups'));
+
+        $this->fireStatusMessage(StatusMessage::TYPES['success'], "Groups were successfully attached");
     }
 }

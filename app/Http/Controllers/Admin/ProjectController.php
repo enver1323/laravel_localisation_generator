@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Entities\Projects\Project;
 use App\Entities\Projects\ProjectRM;
+use App\Http\Requests\Projects\ProjectAddGroupsRequest;
 use App\Http\Requests\Projects\ProjectExportRequest;
 use App\Http\Requests\Projects\ProjectSearchRequest;
 use App\Http\Requests\Projects\ProjectStoreRequest;
@@ -90,5 +91,12 @@ class ProjectController extends AdminController
         $path = $this->service->export($request, $project);
 
         return response()->download($path)->deleteFileAfterSend();
+    }
+
+    public function attachGroups(ProjectAddGroupsRequest $request)
+    {
+        $this->service->attachGroups($request);
+
+        return redirect()->back();
     }
 }
