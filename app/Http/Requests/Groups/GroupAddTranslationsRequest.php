@@ -6,6 +6,13 @@ namespace App\Http\Requests\Groups;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class GroupAddTranslationsRequest
+ * @package App\Http\Requests\Groups
+ *
+ * @property integer $group
+ * @property array $translations
+ */
 class GroupAddTranslationsRequest extends FormRequest
 {
     /**

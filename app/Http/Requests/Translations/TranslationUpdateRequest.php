@@ -4,6 +4,14 @@ namespace App\Http\Requests\Translations;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class TranslationUpdateRequest
+ * @package App\Http\Requests\Translations
+ *
+ * @property string $key
+ * @property array $entries
+ * @property array $groups
+ */
 class TranslationUpdateRequest extends FormRequest
 {
     /**
@@ -26,6 +34,7 @@ class TranslationUpdateRequest extends FormRequest
         return [
             'key' => 'required|string|min:3|max:255',
             'entries' => 'nullable|array',
+            'entries.*' => 'nullable|string|max:255',
             'groups' => 'nullable|array',
             'groups.*' => 'nullable|numeric|exists:groups,id',
         ];

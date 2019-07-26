@@ -4,16 +4,16 @@
 namespace App\Http\Controllers\Admin;
 
 
-
-
-use App\Entities\Groups\GroupRM;
-use App\Entities\Languages\LanguageRM;
-use App\Entities\Translations\Translation;
-use App\Entities\Translations\TranslationRM;
 use App\Http\Requests\Translations\TranslationSearchRequest;
 use App\Http\Requests\Translations\TranslationStoreRequest;
 use App\Http\Requests\Translations\TranslationUpdateRequest;
-use App\Services\Translations\TranslationService;
+use App\Models\Entities\StatusMessage;
+use App\Models\Entities\Translations\Translation;
+use App\Models\Repositories\Groups\GroupRepository;
+use App\Models\Repositories\Languages\LanguageRepository;
+use App\Models\Services\StatusMessages\StatusMessageService;
+use App\Models\Services\Translations\TranslationService;
+use Exception;
 
 class TranslationController extends AdminController
 {
@@ -25,68 +25,90 @@ class TranslationController extends AdminController
         return sprintf('translations.%s', $view);
     }
 
-    public function __construct(LanguageRM $languages, TranslationService $service, GroupRM $groups)
+    public function __construct(
+        LanguageRepository $languages,
+        TranslationService $service,
+        GroupRepository $groups,
+        StatusMessageService $messageService
+    )
     {
         $this->groups = $groups;
         $this->service = $service;
         $this->languages = $languages;
+        $this->messageService = $messageService;
     }
 
     public function index(TranslationSearchRequest $request)
     {
-        list($items, $queryObject) = $this->service->search($request, self::ITEMS_PER_PAGE);
-
         return $this->render($this->getView('translationIndex'), [
-            'items' => $items,
-            'langs' => $this->languages->getAll(),
-            'groups' => $this->groups->getAll(),
-            'searchQuery' => $queryObject
+            'items' => $this->service->search($request, self::ITEMS_PER_PAGE),
+            'langs' => $this->languages->all(),
+            'groups' => $this->groups->all(),
         ]);
     }
 
     public function create()
     {
         return $this->render($this->getView('translationCreate'), [
-            'langs' => $this->languages->getAll(),
-            'groups' => $this->groups->getAll()
+            'langs' => $this->languages->all(),
+            'groups' => $this->groups->all()
         ]);
     }
 
     public function store(TranslationStoreRequest $request)
     {
-        $this->service->create($request);
+        try {
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminTranslation.createSuccess', [
+                'key' => $this->service->create($request)->key,
+            ]));
+        } catch (Exception $exception) {
+            $this->messageService->fireMessage(StatusMessage::TYPES['danger'], $exception->getMessage());
+        }
 
         return redirect()->route('admin.translations.index');
     }
 
-    public function show(TranslationRM $translation)
+    public function show(Translation $translation)
     {
         return $this->render($this->getView('translationShow'), [
             'item' => $translation
         ]);
     }
 
-    public function edit(TranslationRM $translation)
+    public function edit(Translation $translation)
     {
         return $this->render($this->getView('translationEdit'), [
             'item' => $translation,
-            'langs' => $this->languages->getAll(),
-            'groups' => $this->groups->getAll()
+            'langs' => $this->languages->all(),
+            'groups' => $this->groups->all()
         ]);
     }
 
     public function update(TranslationUpdateRequest $request, Translation $translation)
     {
-        $this->service->update($request, $translation);
+        try {
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminTranslation.updateSuccess', [
+                'key' => $this->service->update($request, $translation)->key
+            ]));
+        } catch (Exception $exception) {
+            $this->messageService->fireMessage(StatusMessage::TYPES['danger'], $exception->getMessage());
+        }
 
         return redirect()->route('admin.translations.show', [
             'item' => $translation
         ]);
     }
 
+
     public function destroy(Translation $translation)
     {
-        $this->service->destroy($translation);
+        try {
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminTranslation.destroySuccess', [
+                'key' => $this->service->destroy($translation)
+            ]));
+        } catch (Exception $exception) {
+            $this->messageService->fireMessage(StatusMessage::TYPES['danger'], $exception->getMessage());
+        }
 
         return redirect()->route('admin.translations.index');
     }

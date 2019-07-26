@@ -4,6 +4,13 @@ namespace App\Http\Requests\Languages;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class LanguageStoreRequest
+ * @package App\Http\Requests\Languages
+ *
+ * @property string $code
+ * @property string $name
+ */
 class LanguageStoreRequest extends FormRequest
 {
     /**

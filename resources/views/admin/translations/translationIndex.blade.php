@@ -18,19 +18,19 @@
                     <div class="col form-group">
                         <label for="searchId">ID</label>
                         <input type="number" class="form-control" id="searchId" placeholder="Enter ID" name="id"
-                               value="{{(isset($searchQuery->id) ? $searchQuery->id : '')}}">
+                               value="{{(request('id') ? request('id') : '')}}">
                     </div>
                     <div class="col form-group">
                         <label for="searchKey">Key</label>
                         <input type="text" class="form-control" id="searchKey" placeholder="Enter Key" name="key"
-                               value="{{(isset($searchQuery->key) ? $searchQuery->key : '')}}">
+                               value="{{(request('key') ? request('key') : '')}}">
                     </div>
                     <div class="col form-group">
                         <label for="searchLangs">Languages</label>
                         <select class="form-control" id="searchLangs" name="languages[]" multiple>
                             @foreach($langs as $lang)
                                 <option
-                                    value="{{$lang->code}}" {{isset($searchQuery->languages) && in_array($searchQuery->languages, [$lang->code]) ? 'selected' : ''}}>
+                                    value="{{$lang->code}}" {{request('languages') && in_array($lang->code, request('languages')) ? 'selected' : ''}}>
                                     {{$lang->name}}
                                 </option>
                             @endforeach
@@ -41,7 +41,7 @@
                         <select class="form-control" id="searchGroups" name="groups[]" multiple>
                             @foreach($groups as $group)
                                 <option
-                                    value="{{$group->id}}" {{isset($searchQuery->groups) && in_array($searchQuery->groups, [$group->id]) ? 'selected' : ''}}>
+                                    value="{{$group->id}}" {{request('groups') && in_array($group->id, request('groups')) ? 'selected' : ''}}>
                                     {{$group->name}}
                                 </option>
                             @endforeach

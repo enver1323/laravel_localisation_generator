@@ -4,6 +4,14 @@ namespace App\Http\Requests\Groups;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class GroupSearchRequest
+ * @package App\Http\Requests\Groups
+ *
+ * @property integer $id
+ * @property string $name
+ * @property array $projects
+ */
 class GroupSearchRequest extends FormRequest
 {
     /**
@@ -24,7 +32,7 @@ class GroupSearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'nullable|numeric',
+            'id' => 'nullable|numeric|exists:groups,id',
             'name' => 'nullable|string|max:255',
             'projects' => 'nullable|array',
             'projects.*' => 'nullable|numeric|exists:projects,id'

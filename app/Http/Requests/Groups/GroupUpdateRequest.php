@@ -4,6 +4,14 @@ namespace App\Http\Requests\Groups;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class GroupUpdateRequest
+ * @package App\Http\Requests\Groups
+ *
+ * @property string $name
+ * @property string $description
+ * @property array $projects
+ */
 class GroupUpdateRequest extends FormRequest
 {
     /**

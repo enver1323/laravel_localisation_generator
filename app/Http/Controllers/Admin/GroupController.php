@@ -4,13 +4,16 @@
 namespace App\Http\Controllers\Admin;
 
 
-use App\Entities\Groups\GroupRM;
-use App\Entities\Projects\ProjectRM;
 use App\Http\Requests\Groups\GroupAddTranslationsRequest;
 use App\Http\Requests\Groups\GroupSearchRequest;
 use App\Http\Requests\Groups\GroupStoreRequest;
 use App\Http\Requests\Groups\GroupUpdateRequest;
-use App\Services\Groups\GroupService;
+use App\Models\Entities\Groups\Group;
+use App\Models\Entities\StatusMessage;
+use App\Models\Repositories\Projects\ProjectRepository;
+use App\Models\Services\Groups\GroupService;
+use App\Models\Services\StatusMessages\StatusMessageService;
+use Exception;
 
 class GroupController extends AdminController
 {
@@ -21,64 +24,81 @@ class GroupController extends AdminController
         return sprintf('groups.%s', $view);
     }
 
-    public function __construct(GroupService $service, ProjectRM $projects)
+    public function __construct(GroupService $service, ProjectRepository $projects, StatusMessageService $messageService)
     {
         $this->service = $service;
         $this->projects = $projects;
+        $this->messageService = $messageService;
     }
 
     public function index(GroupSearchRequest $request)
     {
-        list($items, $queryObject) = $this->service->search($request, self::ITEMS_PER_PAGE);
-
         return $this->render($this->getView('groupIndex'), [
-            'items' => $items,
-            'projects' => $this->projects->getAll(),
-            'searchQuery' => $queryObject,
+            'items' => $this->service->search($request, self::ITEMS_PER_PAGE),
+            'projects' => $this->projects->all(),
         ]);
     }
 
     public function create()
     {
         return $this->render($this->getView('groupCreate'), [
-            'projects' => $this->projects->getAll(),
+            'projects' => $this->projects->all(),
         ]);
     }
 
     public function store(GroupStoreRequest $request)
     {
-        $this->service->create($request);
+        try{
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminGroup.createSuccess', [
+                'name' => $this->service->create($request)->name,
+            ]));
+        }catch (Exception $exception){
+            $this->messageService->fireMessage(StatusMessage::TYPES['danger'], $exception->getMessage());
+        }
 
         return redirect()->route('admin.groups.index');
     }
 
-    public function show(GroupRM $group)
+    public function show(Group $group)
     {
         return $this->render($this->getView('groupShow'), [
             'item' => $group
         ]);
     }
 
-    public function edit(GroupRM $group)
+    public function edit(Group $group)
     {
         return $this->render($this->getView('groupEdit'), [
             'item' => $group,
-            'projects' => $this->projects->getAll(),
+            'projects' => $this->projects->all(),
         ]);
     }
 
-    public function update(GroupUpdateRequest $request, GroupRM $group)
+    public function update(GroupUpdateRequest $request, Group $group)
     {
-        $this->service->update($request, $group);
+        try{
+            $group = $this->service->update($request, $group);
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminGroup.updateSuccess', [
+                'name' => $group->name,
+            ]));
+        }catch (Exception $exception){
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], $exception->getMessage());
+        }
 
         return redirect()->route('admin.groups.show', [
             'item' => $group
         ]);
     }
 
-    public function destroy(GroupRM $group)
+    public function destroy(Group $group)
     {
-        $this->service->destroy($group);
+        try{
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminGroup.destroySuccess', [
+                'name' => $this->service->destroy($group),
+            ]));
+        }catch (Exception $exception){
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], $exception->getMessage());
+        }
 
         return redirect()->route('admin.groups.index');
     }
@@ -86,6 +106,7 @@ class GroupController extends AdminController
     public function attachTranslations(GroupAddTranslationsRequest $request)
     {
         $this->service->attachTranslations($request);
+        $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminGroup.attachTranslationsSuccess'));
 
         return redirect()->back();
     }

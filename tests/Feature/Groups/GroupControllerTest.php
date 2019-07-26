@@ -4,7 +4,8 @@
 namespace Tests\Feature\Groups;
 
 
-use App\Entities\Groups\Group;
+
+use App\Models\Entities\Groups\Group;
 use Illuminate\Support\Str;
 use Tests\Feature\FeatureTestCase;
 

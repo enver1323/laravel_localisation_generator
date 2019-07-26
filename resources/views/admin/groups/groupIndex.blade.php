@@ -18,19 +18,19 @@
                     <div class="col form-group">
                         <label for="searchId">ID</label>
                         <input type="number" class="form-control" id="searchId" placeholder="Enter ID" name="id"
-                               value="{{(isset($searchQuery->id) ? $searchQuery->id : '')}}">
+                               value="{{(request('id') ? request('id') : '')}}">
                     </div>
                     <div class="col form-group">
                         <label for="searchName">Name</label>
                         <input type="text" class="form-control" id="searchName" placeholder="Enter Name" name="name"
-                               value="{{(isset($searchQuery->name) ? $searchQuery->name : '')}}">
+                               value="{{request('name') ? request('name') : ''}}">
                     </div>
                     <div class="col form-group">
                         <label for="searchProjects">Projects</label>
                         <select class="form-control" id="searchProjects" name="projects[]" multiple>
                             @foreach($projects as $project)
                                 <option
-                                    value="{{$project->id}}" {{isset($searchQuery->projects) && in_array($searchQuery->projects, [$project->id]) ? 'selected' : ''}}>
+                                    value="{{$project->id}}" {{request('projects') && in_array($project->id, request('projects')) ? 'selected' : ''}}>
                                     {{$project->name}}
                                 </option>
                             @endforeach

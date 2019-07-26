@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 class AdminController extends Controller
 {
     protected $service;
+    protected $messageService;
 
     const ITEMS_PER_PAGE = 15;
 

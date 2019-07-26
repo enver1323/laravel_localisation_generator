@@ -4,12 +4,14 @@
 namespace App\Http\Controllers\Admin;
 
 
-use App\Entities\Languages\Language;
-use App\Entities\Languages\LanguageRM;
 use App\Http\Requests\Languages\LanguageSearchRequest;
 use App\Http\Requests\Languages\LanguageStoreRequest;
 use App\Http\Requests\Languages\LanguageUpdateRequest;
-use App\Services\Languages\LanguageService;
+use App\Models\Entities\Languages\Language;
+use App\Models\Entities\StatusMessage;
+use App\Models\Services\Languages\LanguageService;
+use App\Models\Services\StatusMessages\StatusMessageService;
+use Exception;
 
 class LanguageController extends AdminController
 {
@@ -18,18 +20,16 @@ class LanguageController extends AdminController
         return sprintf('languages.%s', $view);
     }
 
-    public function __construct(LanguageService $service)
+    public function __construct(LanguageService $service, StatusMessageService $messageService)
     {
         $this->service = $service;
+        $this->messageService = $messageService;
     }
 
     public function index(LanguageSearchRequest $request)
     {
-        list($items, $queryObject) = $this->service->search($request, self::ITEMS_PER_PAGE);
-
         return $this->render($this->getView('languageIndex'), [
-            'items' => $items,
-            'searchQuery' => $queryObject,
+            'items' => $this->service->search($request, self::ITEMS_PER_PAGE),
         ]);
     }
 
@@ -40,19 +40,25 @@ class LanguageController extends AdminController
 
     public function store(LanguageStoreRequest $request)
     {
-        $this->service->create($request);
+        try {
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminLanguage.createSuccess', [
+                'name' => $this->service->create($request)->name
+            ]));
+        } catch (Exception $exception) {
+            $this->messageService->fireMessage(StatusMessage::TYPES['danger'], $exception->getMessage());
+        }
 
         return redirect()->route('admin.languages.index');
     }
 
-    public function show(LanguageRM $language)
+    public function show(Language $language)
     {
         return $this->render($this->getView('languageShow'), [
             'item' => $language
         ]);
     }
 
-    public function edit(LanguageRM $language)
+    public function edit(Language $language)
     {
         return $this->render($this->getView('languageEdit'), [
             'item' => $language
@@ -61,7 +67,13 @@ class LanguageController extends AdminController
 
     public function update(LanguageUpdateRequest $request, Language $language)
     {
-        $this->service->update($request, $language);
+        try {
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminLanguage.updateSuccess', [
+                'name' => $this->service->update($request, $language)->name
+            ]));
+        } catch (Exception $exception) {
+            $this->messageService->fireMessage(StatusMessage::TYPES['danger'], $exception->getMessage());
+        }
 
         return redirect()->route('admin.languages.show', [
             'item' => $language
@@ -70,7 +82,13 @@ class LanguageController extends AdminController
 
     public function destroy(Language $language)
     {
-        $this->service->destroy($language);
+        try {
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminLanguage.destroySuccess', [
+                'name' => $this->service->destroy($language)
+            ]));
+        } catch (Exception $exception) {
+            $this->messageService->fireMessage(StatusMessage::TYPES['danger'], $exception->getMessage());
+        }
 
         return redirect()->route('admin.languages.index');
     }
