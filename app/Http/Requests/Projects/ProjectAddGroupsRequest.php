@@ -6,6 +6,13 @@ namespace App\Http\Requests\Projects;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class ProjectAddGroupsRequest
+ * @package App\Http\Requests\Projects
+ *
+ * @property integer $project
+ * @property array $groups
+ */
 class ProjectAddGroupsRequest extends FormRequest
 {
     /**

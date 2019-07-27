@@ -2,58 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fefa86fb-a92e-41fc-9100-761d2f89f14d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Models/Repositories/CustomRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Repositories/Groups/GroupRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Repositories/Languages/LanguageRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Repositories/Projects/ProjectRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Repositories/Translations/TranslationEntryRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Repositories/Translations/TranslationRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/adminGroup.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/adminLanguage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/adminTranslation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/adminProject.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/CustomModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Entities/CustomEntity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/CustomReadModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Groups/Group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Entities/Groups/Group.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Groups/GroupRM.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Languages/Language.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Entities/Languages/Language.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Languages/LanguageRM.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Projects/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Entities/Projects/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Projects/ProjectRM.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/StatusMessage.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Entities/StatusMessage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Translations/Entries/TranslationEntry.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Entities/Translations/Entries/TranslationEntry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Translations/Translation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Entities/Translations/Translation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Translations/TranslationRM.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Users/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Entities/Users/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Entities/Users/UserRM.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/GroupController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/GroupController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TranslationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TranslationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Groups/GroupAddTranslationsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Groups/GroupAddTranslationsRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Groups/GroupSearchRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Groups/GroupSearchRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Groups/GroupStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Groups/GroupStoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Groups/GroupUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Groups/GroupUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageSearchRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageSearchRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageStoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationSearchRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationSearchRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationStoreRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationUpdateRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/CustomService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Services/CustomService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Groups/GroupService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Services/Groups/GroupService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Languages/LanguageService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Services/Languages/LanguageService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Projects/ProjectExportService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Services/Projects/ProjectExportService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Projects/ProjectService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Services/Projects/ProjectService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/StatusMessages/StatusMessageService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Services/StatusMessages/StatusMessageService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Translations/TranslationEntryService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Services/Translations/TranslationEntryService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Translations/TranslationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Services/Translations/TranslationService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Users/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Services/Users/UserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/groups/groupIndex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/groups/groupIndex.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/translations/translationIndex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/translations/translationIndex.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Groups/GroupControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Groups/GroupControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectAddGroupsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectAddGroupsRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectExportRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectExportRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectSearchRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectSearchRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectStoreRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectStoreRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectUpdateRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectUpdateRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Repositories/Groups/GroupRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Repositories/Groups/GroupRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Repositories/Languages/LanguageRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Repositories/Languages/LanguageRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Repositories/Projects/ProjectRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Repositories/Projects/ProjectRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Services/Languages/LanguageService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Services/Languages/LanguageService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Services/Projects/ProjectExportService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Services/Projects/ProjectExportService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Services/Projects/ProjectService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Services/Projects/ProjectService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/GroupFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/GroupFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/LanguageFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/LanguageFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/TranslationEntryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TranslationEntryFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/TranslationFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TranslationFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/languages/languageIndex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/languages/languageIndex.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/projects/projectIndex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/projects/projectIndex.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/FeatureTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/FeatureTestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Languages/LanguageControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Languages/LanguageControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Translations/TranslationControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Translations/TranslationControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Translations/TranslationEntryControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Translations/TranslationEntryControllerTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,42 +77,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/LanguageController.php">
+        <entry file="file://$PROJECT_DIR$/tests/Feature/Languages/LanguageControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="85" column="112" selection-start-line="85" selection-start-column="112" selection-end-line="85" selection-end-column="112" />
+            <state relative-caret-position="425">
+              <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
               <folding>
-                <element signature="e#48#102#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Entities/Languages/Language.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/lang/en/adminTranslation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/TranslationController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="60" selection-start-line="60" selection-end-line="61" />
-              <folding>
-                <element signature="e#48#108#0#PHP" expanded="true" />
+                <element signature="e#45#88#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,57 +137,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectAddGroupsRequest.php" />
-        <option value="$PROJECT_DIR$/app/Services/Projects/ProjectService.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php" />
-        <option value="$PROJECT_DIR$/database/factories/GroupFactory.php" />
-        <option value="$PROJECT_DIR$/tests/Feature/Translations/TranslationControllerTest.php" />
-        <option value="$PROJECT_DIR$/app/Services/Projects/ProjectExportService.php" />
-        <option value="$PROJECT_DIR$/app/Services/Groups/GroupService.php" />
-        <option value="$PROJECT_DIR$/app/Models/Entities/Projects/Project.php" />
-        <option value="$PROJECT_DIR$/app/Models/Entities/Translations/Translation.php" />
-        <option value="$PROJECT_DIR$/app/Models/Entities/Translations/Entries/TranslationEntry.php" />
-        <option value="$PROJECT_DIR$/app/Models/Entities/Users/User.php" />
-        <option value="$PROJECT_DIR$/app/Models/Entities/StatusMessage.php" />
-        <option value="$PROJECT_DIR$/app/Models/Entities/CustomModel.php" />
-        <option value="$PROJECT_DIR$/app/Models/Entities/CustomEntity.php" />
-        <option value="$PROJECT_DIR$/app/Models/Repositories/CustomRepository.php" />
-        <option value="$PROJECT_DIR$/app/Models/Services/StatusMessages/StatusMessageService.php" />
-        <option value="$PROJECT_DIR$/config/auth.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Groups/GroupSearchRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/groups/groupIndex.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Groups/GroupStoreRequest.php" />
         <option value="$PROJECT_DIR$/tests/Feature/Groups/GroupControllerTest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Groups/GroupUpdateRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Groups/GroupAddTranslationsRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/admin.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/admin_group.php" />
         <option value="$PROJECT_DIR$/app/Models/Services/Groups/GroupService.php" />
         <option value="$PROJECT_DIR$/app/Models/Services/CustomService.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageSearchRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationSearchRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationStoreRequest.php" />
         <option value="$PROJECT_DIR$/app/Models/Services/Translations/TranslationEntryService.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/GroupController.php" />
         <option value="$PROJECT_DIR$/app/Models/Entities/Groups/Group.php" />
-        <option value="$PROJECT_DIR$/app/Models/Repositories/Groups/GroupRepository.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Translations/TranslationUpdateRequest.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/adminTranslation.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/TranslationController.php" />
-        <option value="$PROJECT_DIR$/app/Models/Repositories/Projects/ProjectRepository.php" />
         <option value="$PROJECT_DIR$/app/Models/Repositories/Translations/TranslationEntryRepository.php" />
         <option value="$PROJECT_DIR$/app/Models/Repositories/Translations/TranslationRepository.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/translations/translationIndex.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/Repositories/Languages/LanguageRepository.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageStoreRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageUpdateRequest.php" />
         <option value="$PROJECT_DIR$/app/Models/Services/Translations/TranslationService.php" />
-        <option value="$PROJECT_DIR$/app/Models/Services/Languages/LanguageService.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/adminLanguage.php" />
         <option value="$PROJECT_DIR$/app/Models/Entities/Languages/Language.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/LanguageController.php" />
+        <option value="$PROJECT_DIR$/app/Models/Repositories/Languages/LanguageRepository.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Languages/LanguageSearchRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/languages/languageIndex.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectSearchRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectStoreRequest.php" />
+        <option value="$PROJECT_DIR$/app/Models/Services/Languages/LanguageService.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectUpdateRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectAddGroupsRequest.php" />
+        <option value="$PROJECT_DIR$/app/Models/Repositories/Groups/GroupRepository.php" />
+        <option value="$PROJECT_DIR$/app/Models/Repositories/Projects/ProjectRepository.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/adminProject.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php" />
+        <option value="$PROJECT_DIR$/app/Models/Services/Projects/ProjectExportService.php" />
+        <option value="$PROJECT_DIR$/app/Models/Services/Projects/ProjectService.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/Projects/ProjectExportRequest.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/projects/projectIndex.blade.php" />
+        <option value="$PROJECT_DIR$/database/factories/GroupFactory.php" />
+        <option value="$PROJECT_DIR$/database/factories/LanguageFactory.php" />
+        <option value="$PROJECT_DIR$/database/factories/TranslationEntryFactory.php" />
+        <option value="$PROJECT_DIR$/database/factories/TranslationFactory.php" />
+        <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/FeatureTestCase.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/Translations/TranslationEntryControllerTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/Translations/TranslationControllerTest.php" />
+        <option value="$PROJECT_DIR$/tests/Feature/Languages/LanguageControllerTest.php" />
       </list>
     </option>
   </component>
@@ -358,82 +302,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-              <item name="Services" type="462c0819:PsiDirectoryNode" />
-              <item name="Languages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-              <item name="en" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Tests'; set:Tests; class com.intellij.psi.search.scope.TestsScope">
           <expand>
@@ -502,6 +370,60 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="factories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Feature" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Feature" type="462c0819:PsiDirectoryNode" />
+              <item name="Groups" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Feature" type="462c0819:PsiDirectoryNode" />
+              <item name="Languages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="localization_generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="localization_generator" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Feature" type="462c0819:PsiDirectoryNode" />
+              <item name="Translations" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -515,7 +437,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../booking_backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -618,17 +540,19 @@
       <workItem from="1564041510573" duration="4158000" />
       <workItem from="1564051343128" duration="2960000" />
       <workItem from="1564127282156" duration="16480000" />
+      <workItem from="1564146312472" duration="33000" />
+      <workItem from="1564205957097" duration="3245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206945000" />
+    <option name="totallyTimeSpent" value="210223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="-8" width="1859" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4985207" visible="true" weight="0.2167871" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4985207" visible="true" weight="0.22123402" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.50147927" side_tool="true" weight="0.18176764" />
       <window_info id="Favorites" order="3" sideWeight="0.50147927" side_tool="true" weight="0.18176764" />
@@ -643,7 +567,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32917964" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" weight="0.32996973" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50305724" side_tool="true" weight="0.3281412" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49694276" weight="0.3271028" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49694276" visible="true" weight="0.3271028" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32917964" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="13" weight="0.32996973" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -657,186 +581,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/Entities/Users/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding>
-            <element signature="e#38#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Entities/StatusMessage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="70" column="34" selection-start-line="70" selection-start-column="34" selection-end-line="70" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#46#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="363" column="23" selection-start-line="363" selection-start-column="23" selection-end-line="363" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Concerns/InteractsWithInput.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="208" column="28" selection-start-line="208" selection-start-column="28" selection-end-line="208" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Groups/GroupSearchRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="43" lean-forward="true" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="190" column="70" lean-forward="true" selection-start-line="190" selection-start-column="70" selection-end-line="190" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/groups/groupIndex.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-527">
-          <caret line="47" column="10" lean-forward="true" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Arr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="329" column="22" selection-start-line="329" selection-start-column="22" selection-end-line="329" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Groups/GroupStoreRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Feature/Groups/GroupControllerTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-632">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-          <folding>
-            <element signature="e#43#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Repositories/CustomRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasAttributes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="1127" column="20" selection-start-line="1127" selection-start-column="20" selection-end-line="1127" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Groups/GroupUpdateRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Groups/GroupAddTranslationsRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="906" column="13" selection-start-line="906" selection-start-column="13" selection-end-line="906" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1167">
-          <caret line="181" column="10" selection-start-line="181" selection-start-column="10" selection-end-line="181" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Services/CustomService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Services/StatusMessages/StatusMessageService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="46" lean-forward="true" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Languages/LanguageSearchRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Translations/TranslationSearchRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Entities/Translations/Translation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="e#54#91#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Entities/Translations/Entries/TranslationEntry.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -927,26 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Repositories/Projects/ProjectRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#54#95#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Repositories/Groups/GroupRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="904">
-          <caret line="105" column="5" lean-forward="true" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
-          <folding>
-            <element signature="e#52#109#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/translations/translationIndex.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -978,26 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Services/Groups/GroupService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="66" column="20" lean-forward="true" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-          <folding>
-            <element signature="e#48#105#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Services/Translations/TranslationService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#53#102#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/Languages/LanguageUpdateRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1005,42 +709,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Repositories/Languages/LanguageRepository.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Languages/LanguageSearchRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
-          <folding>
-            <element signature="e#55#109#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="413">
+          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Services/Languages/LanguageService.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/languages/languageIndex.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="62" column="27" lean-forward="true" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
-          <folding>
-            <element signature="e#51#94#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/TranslationController.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/Entities/Languages/Language.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="60" selection-start-line="60" selection-end-line="61" />
-          <folding>
-            <element signature="e#48#108#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/adminLanguage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        <state relative-caret-position="566">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1051,19 +737,281 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Entities/Languages/Language.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/TranslationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        <state relative-caret-position="566">
+          <caret line="60" selection-start-line="60" selection-end-line="61" />
+          <folding>
+            <element signature="e#48#108#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Projects/ProjectStoreRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Projects/ProjectSearchRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Services/Languages/LanguageService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
+          <folding>
+            <element signature="e#51#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Services/Translations/TranslationService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="e#53#102#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/adminLanguage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/LanguageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="85" column="112" selection-start-line="85" selection-start-column="112" selection-end-line="85" selection-end-column="112" />
+        <state relative-caret-position="413">
+          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
           <folding>
             <element signature="e#48#102#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Projects/ProjectUpdateRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Projects/ProjectAddGroupsRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Repositories/Groups/GroupRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="107" column="5" lean-forward="true" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+          <folding>
+            <element signature="e#52#109#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/adminProject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa13892.25534/auth_rules.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/projects/projectIndex.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-646">
+          <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/GroupFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#66#103#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/LanguageFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#67#110#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/TranslationEntryFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#67#110#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/TranslationFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#67#116#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#67#102#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Projects/ProjectExportRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <folding>
+            <element signature="e#46#100#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Services/Projects/ProjectService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
+          <folding>
+            <element signature="e#50#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="111" column="110" selection-start-line="111" selection-start-column="110" selection-end-line="111" selection-end-column="110" />
+          <folding>
+            <element signature="e#48#103#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Services/Projects/ProjectExportService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding>
+            <element signature="e#50#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Repositories/Projects/ProjectRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+          <folding>
+            <element signature="e#54#109#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Services/Groups/GroupService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+          <folding>
+            <element signature="e#48#105#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Repositories/Languages/LanguageRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="93" column="4" selection-start-line="93" selection-start-column="4" selection-end-line="96" selection-end-column="5" />
+          <folding>
+            <element signature="e#55#109#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/FeatureTestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#35#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/Groups/GroupControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
+          <folding>
+            <element signature="e#43#80#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/Translations/TranslationEntryControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#48#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/Translations/TranslationControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1083">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#49#98#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Feature/Languages/LanguageControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
+          <folding>
+            <element signature="e#45#88#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

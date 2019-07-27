@@ -31,7 +31,7 @@ class LanguageSearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'code' => 'nullable|alpha|max:2',
+            'code' => 'nullable|alpha|max:2|exists:languages,code',
             'name' => 'nullable|string|max:255',
         ];
     }

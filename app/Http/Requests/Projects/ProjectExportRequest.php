@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\Projects;
 
-use App\Services\Projects\ProjectExportService;
+use App\Models\Services\Projects\ProjectExportService;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 

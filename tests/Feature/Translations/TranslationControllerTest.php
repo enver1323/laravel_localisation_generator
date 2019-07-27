@@ -4,7 +4,7 @@
 namespace Tests\Feature\Translations;
 
 
-use App\Entities\Translations\Translation;
+use App\Models\Entities\Translations\Translation;
 use Illuminate\Support\Str;
 use Tests\Feature\FeatureTestCase;
 

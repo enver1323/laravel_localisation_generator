@@ -1,93 +1,95 @@
 <?php
 
 
-namespace App\Services\Projects;
+namespace App\Models\Services\Projects;
 
 
-use App\Entities\Projects\Project;
-use App\Entities\Projects\ProjectRM;
-use App\Entities\StatusMessage;
+use App\Models\Entities\Projects\Project;
 use App\Http\Requests\Projects\ProjectAddGroupsRequest;
 use App\Http\Requests\Projects\ProjectExportRequest;
 use App\Http\Requests\Projects\ProjectSearchRequest;
 use App\Http\Requests\Projects\ProjectStoreRequest;
 use App\Http\Requests\Projects\ProjectUpdateRequest;
-use App\Services\CustomService;
+use App\Models\Repositories\Projects\ProjectRepository;
+use App\Models\Services\CustomService;
+use Exception;
+use Illuminate\Pagination\LengthAwarePaginator;
+use Throwable;
 
 class ProjectService extends CustomService
 {
-    private $model;
-    private $entity;
+    /**
+     * @var ProjectRepository
+     */
+    private $projects;
+    /**
+     * @var ProjectExportService
+     */
     private $exportService;
 
-    public function __construct(Project $entity, ProjectRM $model, ProjectExportService $exportService)
+    public function __construct(ProjectRepository $projects, ProjectExportService $exportService)
     {
-        $this->model = $model;
-        $this->entity = $entity;
+        $this->projects = $projects;
         $this->exportService = $exportService;
     }
 
-    public function search(ProjectSearchRequest $request, int $itemsPerPage): array
+    /**
+     * @param ProjectSearchRequest $request
+     * @param int $itemsPerPage
+     * @return LengthAwarePaginator
+     */
+    public function search(ProjectSearchRequest $request, int $itemsPerPage): LengthAwarePaginator
     {
-        $query = $this->model;
-        $object = (object)[];
+        if (!empty($request->validated()))
+            return $this->projects->formSearch($request, $itemsPerPage);
 
-        if (!empty($request->input()))
-            list($query, $object) = $this->formSearch($request, $query, $object);
-
-        return [$query->paginate($itemsPerPage), $object];
+        return $this->projects->paginate($itemsPerPage);
     }
 
-    private function formSearch(ProjectSearchRequest $request, ProjectRM $query, $object): array
+    /**
+     * @param ProjectStoreRequest $request
+     * @return Project
+     * @throws Throwable
+     */
+    public function create(ProjectStoreRequest $request): Project
     {
-        if ($request->input('id')) {
-            $object->id = $request->input('id');
-            $query = $query->where('id', '=', $request->input('id'));
-        }
-
-        if ($request->input('name')) {
-            $object->name = $request->input('name');
-            $query = $query->where('name', 'LIKE', "%$object->name%");
-        }
-
-        if (!$query->count()) {
-            $query = $this->model;
-            $this->fireStatusMessage(StatusMessage::TYPES['warning'], 'Nothing was found according to your query');
-        }
-
-        return [$query, $object];
+        return $this->projects->create($request->name, $request->description);
     }
 
-    public function create(ProjectStoreRequest $request): void
+    /**
+     * @param ProjectUpdateRequest $request
+     * @param Project $item
+     * @return Project
+     * @throws Throwable
+     */
+    public function update(ProjectUpdateRequest $request, Project $item): Project
     {
-        $item = $this->entity->create([
-            'name' => $request->input('name'),
-            'description' => $request->input('description')
-        ]);
+        $item->name = $request->name;
+        $item->description = $request->description;
+        $this->projects->save($item);
 
-        $this->fireStatusMessage(StatusMessage::TYPES['success'], "Project \"$item->name\" was successfully created");
-        return;
+        return $item;
     }
 
-    public function update(ProjectUpdateRequest $request, Project $item): void
-    {
-        $item->name = $request->input('name');
-        $item->description = $request->input('description');
-        $item->save();
-
-        $this->fireStatusMessage(StatusMessage::TYPES['success'], "Project \"$item->name\" was successfully modified");
-        return;
-    }
-
-    public function destroy(Project $item): void
+    /**
+     * @param Project $item
+     * @return string
+     * @throws Exception
+     */
+    public function destroy(Project $item): string
     {
         $name = $item->name;
-        $item->delete();
+        $this->projects->delete($item);
 
-        $this->fireStatusMessage(StatusMessage::TYPES['success'], "Project \"$name\" was successfully deleted");
+        return $name;
     }
 
-    public function export(ProjectExportRequest $request, ProjectRM $project): ?string
+    /**
+     * @param ProjectExportRequest $request
+     * @param Project $project
+     * @return string|null
+     */
+    public function export(ProjectExportRequest $request, Project $project): ?string
     {
         $path = '';
 
@@ -97,16 +99,14 @@ class ProjectService extends CustomService
         if($request->input('type') === ProjectExportService::$types['archive'])
             $path = $this->exportService->archive($project, $request->input('languages'));
 
-        $this->fireStatusMessage(StatusMessage::TYPES['success'], 'File was successfully generated');
-
         return $path;
     }
 
+    /**
+     * @param ProjectAddGroupsRequest $request
+     */
     public function attachGroups(ProjectAddGroupsRequest $request): void
     {
-        $this->model->getById($request->input('project'))->groups()
-            ->syncWithoutDetaching($request->input('groups'));
-
-        $this->fireStatusMessage(StatusMessage::TYPES['success'], "Groups were successfully attached");
+        $this->projects->attachGroups($request);
     }
 }

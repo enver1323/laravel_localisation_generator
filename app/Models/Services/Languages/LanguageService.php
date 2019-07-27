@@ -46,9 +46,7 @@ class LanguageService extends CustomService
      */
     public function create(LanguageStoreRequest $request): Language
     {
-        $item = $this->languages->create($request->code, $request->name);
-
-        return $item;
+        return $this->languages->create($request->code, $request->name);
     }
 
     /**

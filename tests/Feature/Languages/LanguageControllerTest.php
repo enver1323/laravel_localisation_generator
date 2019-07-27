@@ -4,7 +4,7 @@
 namespace Tests\Feature\Languages;
 
 
-use App\Entities\Languages\Language;
+use App\Models\Entities\Languages\Language;
 use Illuminate\Support\Str;
 use Tests\Feature\FeatureTestCase;
 
@@ -39,12 +39,10 @@ class LanguageControllerTest extends FeatureTestCase
 
         $this->call('get', $route, ['code' => $item->code])
             ->assertViewIs('admin.languages.languageIndex')
-            ->assertSeeText('results were found')
             ->assertOk();
 
         $this->call('get', $route, ['name' => $item->name])
             ->assertViewIs('admin.languages.languageIndex')
-            ->assertSeeText('results were found')
             ->assertOk();
     }
 

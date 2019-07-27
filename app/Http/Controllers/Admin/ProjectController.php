@@ -4,14 +4,16 @@
 namespace App\Http\Controllers\Admin;
 
 
-use App\Entities\Projects\Project;
-use App\Entities\Projects\ProjectRM;
 use App\Http\Requests\Projects\ProjectAddGroupsRequest;
 use App\Http\Requests\Projects\ProjectExportRequest;
 use App\Http\Requests\Projects\ProjectSearchRequest;
 use App\Http\Requests\Projects\ProjectStoreRequest;
 use App\Http\Requests\Projects\ProjectUpdateRequest;
-use App\Services\Projects\ProjectService;
+use App\Models\Entities\Projects\Project;
+use App\Models\Entities\StatusMessage;
+use App\Models\Services\Projects\ProjectService;
+use App\Models\Services\StatusMessages\StatusMessageService;
+use Exception;
 use Illuminate\View\View;
 
 class ProjectController extends AdminController
@@ -21,18 +23,16 @@ class ProjectController extends AdminController
         return sprintf('projects.%s', $view);
     }
 
-    public function __construct(ProjectService $service)
+    public function __construct(ProjectService $service, StatusMessageService $messageService)
     {
         $this->service = $service;
+        $this->messageService = $messageService;
     }
 
     public function index(ProjectSearchRequest $request): View
     {
-        list($items, $queryObject) = $this->service->search($request, self::ITEMS_PER_PAGE);
-
         return $this->render($this->getView('projectIndex'), [
-            'items' => $items,
-            'searchQuery' => $queryObject,
+            'items' => $this->service->search($request, self::ITEMS_PER_PAGE),
         ]);
     }
 
@@ -43,19 +43,25 @@ class ProjectController extends AdminController
 
     public function store(ProjectStoreRequest $request)
     {
-        $this->service->create($request);
+        try {
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminProject.createSuccess', [
+                'name' => $this->service->create($request)->name
+            ]));
+        } catch (Exception $exception) {
+            $this->messageService->fireMessage(StatusMessage::TYPES['danger'], $exception->getMessage());
+        }
 
         return redirect()->route('admin.projects.index');
     }
 
-    public function show(ProjectRM $project): View
+    public function show(Project $project): View
     {
         return $this->render($this->getView('projectShow'), [
             'item' => $project
         ]);
     }
 
-    public function edit(ProjectRM $project): View
+    public function edit(Project $project): View
     {
         return $this->render($this->getView('projectEdit'), [
             'item' => $project
@@ -64,7 +70,14 @@ class ProjectController extends AdminController
 
     public function update(ProjectUpdateRequest $request, Project $project)
     {
-        $this->service->update($request, $project);
+
+        try {
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminProject.updateSuccess', [
+                'name' => $this->service->update($request, $project)->name
+            ]));
+        } catch (Exception $exception) {
+            $this->messageService->fireMessage(StatusMessage::TYPES['danger'], $exception->getMessage());
+        }
 
         return redirect()->route('admin.projects.show', [
             'item' => $project
@@ -73,12 +86,18 @@ class ProjectController extends AdminController
 
     public function destroy(Project $project)
     {
-        $this->service->destroy($project);
+        try {
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminLanguage.destroySuccess', [
+                'name' => $this->service->destroy($project)
+            ]));
+        } catch (Exception $exception) {
+            $this->messageService->fireMessage(StatusMessage::TYPES['danger'], $exception->getMessage());
+        }
 
         return redirect()->route('admin.projects.index');
     }
 
-    public function setUpExport(ProjectRM $project): View
+    public function setUpExport(Project $project): View
     {
         return $this->render($this->getView('projectExport'), [
             'item' => $project,
@@ -86,11 +105,16 @@ class ProjectController extends AdminController
         ]);
     }
 
-    public function export(ProjectExportRequest $request, ProjectRM $project)
+    public function export(ProjectExportRequest $request, Project $project)
     {
-        $path = $this->service->export($request, $project);
-
-        return response()->download($path)->deleteFileAfterSend();
+        try{
+            $path = $this->service->export($request, $project);
+            $this->messageService->fireMessage(StatusMessage::TYPES['success'], __('adminProject.exportSuccess'));
+            return response()->download($path)->deleteFileAfterSend();
+        }catch (Exception $exception) {
+            $this->messageService->fireMessage(StatusMessage::TYPES['danger'], $exception->getMessage());
+            return redirect()->back();
+        }
     }
 
     public function attachGroups(ProjectAddGroupsRequest $request)

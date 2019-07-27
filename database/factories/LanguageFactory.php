@@ -2,7 +2,7 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\Entities\Languages\Language;
+use App\Models\Entities\Languages\Language;
 use Faker\Generator as Faker;
 
 $factory->define(Language::class, function (Faker $faker) {

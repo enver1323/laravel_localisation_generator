@@ -106,7 +106,7 @@ class LanguageRepository extends CustomRepository
         $query = $this->entity;
 
         if ($request->code)
-            $query = $query->where('id', '=', $request->code);
+            $query = $query->where('code', '=', $request->code);
 
         if ($request->name)
             $query = $query->where('name', 'LIKE', "%$request->name%");

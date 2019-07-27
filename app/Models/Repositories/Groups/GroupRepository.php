@@ -104,8 +104,7 @@ class GroupRepository extends CustomRepository
      */
     public function attachTranslations(GroupAddTranslationsRequest $request): void
     {
-        $item = $this->find($request->group);
-        $item->translations()->syncWithoutDetaching($request->translations);
+        $this->find($request->group)->translations()->syncWithoutDetaching($request->translations);
     }
 
     /**

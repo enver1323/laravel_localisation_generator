@@ -4,7 +4,7 @@
 namespace Tests\Feature;
 
 
-use App\Entities\Users\User;
+use App\Models\Entities\Users\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Support\Facades\Auth;
 use Tests\TestCase;

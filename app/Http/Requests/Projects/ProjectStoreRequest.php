@@ -4,6 +4,13 @@ namespace App\Http\Requests\Projects;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class ProjectStoreRequest
+ * @package App\Http\Requests\Projects
+ *
+ * @property string $name
+ * @property string $description
+ */
 class ProjectStoreRequest extends FormRequest
 {
     /**

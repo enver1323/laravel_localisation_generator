@@ -18,12 +18,12 @@
                     <div class="col form-group">
                         <label for="searchCode">Code</label>
                         <input type="text" maxlength="2" class="form-control" id="searchCode" placeholder="Enter Code" name="code"
-                               value="{{(isset($searchQuery->code) ? $searchQuery->code : '')}}">
+                               value="{{request('code') ? request('code') : ''}}">
                     </div>
                     <div class="col form-group">
                         <label for="searchName">Name</label>
                         <input type="text" class="form-control" id="searchName" placeholder="Enter Name" name="name"
-                               value="{{(isset($searchQuery->name) ? $searchQuery->name : '')}}">
+                               value="{{(request('name') ? request('name') : '')}}">
                     </div>
                     <div class="col">
                         <button class="btn btn-block btn-success" type="submit">

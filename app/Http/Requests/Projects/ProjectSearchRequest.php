@@ -4,6 +4,13 @@ namespace App\Http\Requests\Projects;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/**
+ * Class ProjectSearchRequest
+ * @package App\Http\Requests\Projects
+ *
+ * @property integer $id
+ * @property string $name
+ */
 class ProjectSearchRequest extends FormRequest
 {
     /**
@@ -24,8 +31,8 @@ class ProjectSearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'nullable|numeric',
-            'name' => 'nullable|string'
+            'id' => 'nullable|numeric|exists:projects,id',
+            'name' => 'nullable|string|max:255'
         ];
     }
 }
